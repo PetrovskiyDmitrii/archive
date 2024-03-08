@@ -1,0 +1,281 @@
+.admin {
+  &__user {
+  }
+}
+
+
+.user-form {
+  max-width: 404px;
+  margin: 0 auto;
+  background: var(--white);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.02);
+  border-radius: 15px;
+  padding: 34px 30px;
+  @media (max-width: $mobile) {
+    padding: 34px 20px;
+  }
+
+  .dark & {
+    box-shadow: none
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: math.div(22, 18);
+    text-align: center;
+    font-family: var(--fontMontserrat);
+
+
+    @media (max-width: $mobile) {
+      font-size: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 29px;
+
+      &.mb-8 {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &__items {
+    display: grid;
+    gap: 14px;
+
+    .input-item__label {
+      color: var(--text-primary);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__button.button {
+    height: 46px;
+    @media (max-width: $mobile) {
+      height: 37px;
+    }
+  }
+
+  &__icon {
+    background: rgba(56, 98, 236, 0.15);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+  }
+
+  &__descr {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: var(--secondary-text-light);
+    max-width: 270px;
+    margin: 0 auto;
+
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    gap: 20px;
+    @media (max-width: $mobileSmall) {
+      gap: 14px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__left-text {
+    line-height: math.div(19, 16);
+    @media (max-width: $mobileSmall) {
+      font-size: 14px;
+    }
+  }
+
+  &__time {
+    color: var(--secondary-text-light);
+  }
+
+  &__btn-small {
+    width: 153px;
+    height: 39px;
+    @media (max-width: $mobileSmall) {
+      width: 140px;
+    }
+  }
+}
+
+.user-main {
+  &__block {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+  }
+
+  .input.input_team {
+    padding-right: 100px;
+  }
+
+  &__actions {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    bottom: 17px;
+    right: 13px;
+    @media (max-width: 600px) {
+      bottom: 11px;
+      right: 16px;
+    }
+
+    svg {
+      width: 12px;
+      height: 15px;
+    }
+  }
+
+  &__group {
+    color: var(--icon-light);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 120%;
+    font-family: var(--fontMontserrat);
+
+    svg {
+      width: 14px;
+      height: 17px;
+      fill: var(--icon-light
+      );
+    }
+  }
+
+  &__remove {
+    svg {
+      fill: #EB365C;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: math.div(22, 18);
+    font-family: var(--fontMontserrat);
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .select__title {
+    @media (max-width: 600px) {
+      height: 40px;
+    }
+  }
+
+  &__button.button {
+    height: 32px;
+    font-size: 12px;
+    min-width: 106px;
+    @media (max-width: 600px) {
+      width: 100%;
+
+    }
+  }
+
+  &__grid-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px 24px;
+    align-items: flex-end;
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px 30px;
+    }
+    @media (max-width: 600px) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 14px;
+    }
+  }
+
+  .input-item {
+    position: relative;
+
+    input {
+      padding-right: 40px;
+      @media (max-width: 600px) {
+        height: 40px;
+      }
+    }
+  }
+
+  &__link {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 17px;
+    bottom: 19px;
+    @media (max-width: 600px) {
+      bottom: 15px;
+      right: 14px;
+      width: 12px;
+      height: 12px;
+    }
+    @media (hover: hover) {
+      &:hover {
+        svg {
+          fill: var(--blue)
+        }
+      }
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: var(--secondary-text-light);
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    }
+  }
+
+  &__chk {
+    padding-bottom: 17px;
+    @media (max-width: 600px) {
+      padding: 10px 0;
+    }
+
+    .checkbox__label {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .checkbox__text {
+      color: var(--text-primary);
+    }
+  }
+}
+

@@ -1,0 +1,377 @@
+
+.cards {
+  @media (max-width: $tablet) {
+    padding-top: 25px;
+  }
+  @media (max-width: $mobile) {
+    padding-top: 0px;
+  }
+
+  &__top {
+    display: flex;
+    margin: 0 -37px;
+    position: relative;
+    z-index: 2;
+    @media (max-width: 1440px) {
+      margin: 0 -15px;
+    }
+    @media (max-width: $tablet) {
+      flex-wrap: wrap;
+      gap: 30px 0;
+      margin: 0 -27px;
+
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    &_team {
+      .cards-stat .card-dash__col2 {
+        @media (max-width: 1200px) {
+          font-size: 16px;
+        }
+        @media (max-width: $tablet) {
+          font-size: 18px;
+        }
+      }
+
+      .cards__top-column {
+        &:first-child {
+          width: 27%;
+          @media (max-width: 1300px) {
+            width: 36%;
+          }
+          @media (max-width: $tablet) {
+            width: 100%;
+            border: none;
+          }
+        }
+
+        &:nth-child(2) {
+          @media (max-width: $tablet) {
+            border-right: 1px solid var(--divider-color);
+          }
+          @media (max-width: $mobile) {
+            border: none;
+          }
+        }
+
+        &:nth-child(2), &:nth-child(3) {
+          @media (max-width: $tablet) {
+            width: 50%;
+          }
+          @media (max-width: $mobile) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &__top-column {
+    padding: 0 37px;
+    flex: 1 1 auto;
+
+    .header-admin__rate {
+      @media (min-width: $tablet) {
+        display: none;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+        @media (max-width: $mobile) {
+          margin-bottom: 24px;
+        }
+      }
+    }
+
+    @media (max-width: 1440px) {
+      padding: 0 15px;
+
+    }
+    @media (max-width: $tablet) {
+      padding: 0 27px;
+      &:first-child {
+        width: percent(381, 688);
+        @media (max-width: $mobile) {
+          width: 100%;
+        }
+      }
+      &:nth-child(2) {
+        width: percent(307, 688);
+        @media (max-width: $mobile) {
+          width: 100%;
+        }
+      }
+    }
+
+
+    &:not(:last-child) {
+      border-right: 1px solid var(--divider-color);
+      @media (max-width: $tablet) {
+        border: none;
+      }
+    }
+
+    &:first-child {
+      @media (max-width: $tablet) {
+        border-right: 1px solid var(--divider-color);
+      }
+    }
+
+    &:last-child {
+      width: 300px;
+      @media (max-width: 1400px) {
+        width: auto;
+      }
+      @media (max-width: $tablet) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.cards-balance {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  @media (max-width: $tablet) {
+    gap: 18px;
+  }
+  @media (max-width: $mobile) {
+    gap: 20px;
+  }
+
+
+  &__column {
+    width: 100%;
+  }
+
+  &__label {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 17px;
+    color: var(--secondary-text-light);
+    @media (max-width: $tablet) {
+      font-size: 16px;
+      line-height: math.div(16, 15);
+    }
+    @media (max-width: $mobile) {
+      font-size: 18px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 23px;
+      @media (max-width: $tablet) {
+        margin-bottom: 6px;
+      }
+      @media (max-width: $mobile) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__value {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 23px;
+    color: var(--blue);
+
+    &:not(:last-child) {
+      margin-bottom: 29px;
+      @media (max-width: $tablet) {
+        margin-bottom: 17px;
+      }
+      @media (max-width: $mobile) {
+        margin-bottom: 36px;
+      }
+    }
+  }
+
+  .button, .button-gradient {
+    height: 37px;
+  }
+
+  &__button {
+    width: 100%;
+    @media (max-width: 1100px) {
+      font-size: 14px;
+    }
+    @media (max-width: $tablet) {
+      font-size: 16px;
+    }
+  }
+}
+
+.cards-stat {
+  .card-dash__row {
+    gap: 5px;
+  }
+
+  .card-dash__rows {
+    gap: 0px;
+    @media (max-width: $tablet) {
+      gap: 10px;
+    }
+    @media (max-width: $mobile) {
+      gap: 8px;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: math.div(17, 18);
+    @media (max-width: $mobile) {
+      font-size: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+      @media (max-width: $mobile) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .card-dash__col1 {
+    width: 50%;
+    @media (max-width: $tablet) {
+      font-size: 14px;
+    }
+  }
+
+  .card-dash__col2 {
+    @media (max-width: 1200px) {
+      font-size: 18px;
+    }
+  }
+}
+
+
+.cards-new {
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 17px;
+
+
+    &:not(:last-child) {
+      margin-bottom: 21px;
+    }
+  }
+
+  &__buttons {
+    display: grid;
+    gap: 14px;
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 44px;
+    }
+    @media (max-width: $mobile) {
+      gap: 20px;
+    }
+  }
+
+  .button, .button-gradient {
+    min-height: 37px;
+    height: auto;
+  }
+
+  &__button {
+    @media (max-width: 1100px) {
+      font-size: 14px;
+    }
+    @media (max-width: $mobile) {
+      padding: 5px 10px;
+    }
+  }
+}
+
+.cards-team {
+  @media (max-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
+
+  &__top {
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: math.div(29, 24);
+    font-family: var(--fontMontserrat);
+
+    span {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 13px;
+      @media (max-width: $mobile) {
+        margin-bottom: 9px;
+      }
+    }
+  }
+
+  ul {
+    display: grid;
+    gap: 8px;
+    font-family: var(--fontMontserrat);
+    font-size: 14px;
+    line-height: math.div(17, 14);
+    color: var(--secondary-text-light);
+    @media (max-width: $mobile) {
+      font-size: 14px;
+      gap: 2px;
+    }
+
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 14px;
+    @media (max-width: $tablet) {
+      padding-top: 11px;
+    }
+    @media (max-width: $mobile) {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .button {
+      height: 37px;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    @media (max-width: 1200px) {
+      font-size: 14px;
+      padding: 0 5px;
+    }
+    @media (max-width: $tablet) {
+      font-size: 16px;
+      min-width: 168px;
+    }
+    @media (max-width: $mobile) {
+      width: 100%;
+      min-width: auto;
+    }
+
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+

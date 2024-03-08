@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Sign Up"
+})
+<body>
+<div class="wrapper wrapper_grey">
+    @@include('html/_header-log.htm',{})
+    <main class="page">
+        <div class="sign">
+            <div class="sign__container">
+                <form action="#" class="sign__form sign-form"><h2 class="sign-form__title">
+                    Sing Up
+                </h2>
+                    <div class="sign-form__items">
+                        <label class="input-item">
+                            <span class="input-item__label">Name</span>
+                            <input type="text" class="input">
+                        </label>
+                        <label class="input-item">
+                            <span class="input-item__label">Email</span>
+                            <input type="text" class="input">
+                        </label>
+                        <label class="input-item">
+                            <span class="input-item__label">Password</span>
+                            <input type="password" class="input">
+                            <p class="input-item__descr">
+                                Password must contain numbers (0-9), Capital and uppercase Latin letters (A-z)
+                            </p>
+                        </label>
+                        <label class="input-item">
+                            <span class="input-item__label">Telegram</span>
+                            <input type="text" placeholder="@" class="input">
+                        </label>
+                    </div>
+                    <div class="sign-form__checkbox">
+                        <div class="checkbox-sign">
+                            <input id="c_1" data-error="Ошибка" class="checkbox-sign__input" type="checkbox" value="1"
+                                   name="form[]">
+                            <label for="c_1" class="checkbox-sign__label"><span class="checkbox-sign__text"> By agreeing to the <a
+                                    data-popup="#term"
+                                    href="">Terms of use</a> & <a href="">Privacy Policy</a></span></label>
+                        </div>
+                    </div>
+                    <button class="sign-form__button button-gradient">
+                        Confirm
+                    </button>
+                    <div class="sign-form__bottom-text">
+                        <p>Already have account?
+                            <a href="">Log in</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+<div id="term" aria-hidden="true" class="popup  popup-warning popup_term">
+    <div class="popup__wrapper">
+        <div class="popup__content">
+            <div class="popup-warning__title">
+                Terms of Use
+            </div>
+            <div class="popup-warning__text">
+                <p>You must read and accept our Terms of Use and Privacy Policy before using the product.</p>
+            </div>
+            <div class="checkbox-sign">
+                <input id="c_12" data-error="Ошибка" class="checkbox-sign__input" type="checkbox" value="1"
+                       name="form[]">
+                <label for="c_12" class="checkbox-sign__label"><span
+                        class="checkbox-sign__text">Do not show this again</span></label>
+            </div>
+            <div class="popup-warning__buttons">
+                <button data-close class="popup-warning__button button button_border-red">
+                    Exit
+                </button>
+                <a href="" class="popup-warning__button button button_grey">
+                    Agree
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+@@include('html/_js.htm',{})
+</body>
+</html>

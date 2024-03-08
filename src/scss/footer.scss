@@ -1,0 +1,219 @@
+.footer {
+  color: var(--white);
+  background: var(--gradient-dark);
+  padding: 51px 0 20px;
+  @media (max-width: $tablet) {
+    padding: 22px 0 40px;
+  }
+  @media (max-width: $mobile) {
+    padding: 22px 0;
+  }
+
+  &__container {
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    @media (max-width: $mobile) {
+      flex-wrap: wrap;
+      gap: 27px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 14px;
+      @media (max-width: $tablet) {
+        margin-bottom: 17px;
+      }
+      @media (max-width: $mobile) {
+        margin-bottom: 22px;
+      }
+    }
+  }
+
+  &__left {
+    max-width: 210px;
+    @media (max-width: $tablet) {
+      max-width: 162px;
+    }
+    @media (max-width: $mobile) {
+      width: 50%;
+    }
+    @media (max-width: $mobileSmall) {
+      max-width: 104px;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    @media (max-width: $tablet) {
+      max-width: 100px;
+    }
+    @media (max-width: $mobile) {
+      max-width: 79px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+      @media (max-width: $tablet) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__text {
+    line-height: 160%;
+    @media (max-width: $tablet) {
+      font-size: 8px;
+    }
+  }
+
+  &__center {
+    @media (max-width: $mobile) {
+      order: 3;
+      width: 100%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 10px 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (max-width: $tablet) {
+      gap: 10px 33px;
+    }
+    @media (max-width: $mobile) {
+      gap: 10px 40px;
+    }
+
+    li {
+      a {
+        line-height: math.div(19, 16);
+        transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+        @media (max-width: $tablet) {
+          font-size: 12px;
+        }
+        @media (max-width: $mobile) {
+          font-size: 10px;
+        }
+        @media (hover: hover) {
+          &:hover {
+            color: var(--blue);
+          }
+        }
+      }
+    }
+  }
+
+  &__right {
+    max-width: 190px;
+    @media (max-width: $tablet) {
+      max-width: 170px;
+    }
+    @media (max-width: $mobile) {
+      width: 50%;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    line-height: 15px;
+    text-align: right;
+
+    @media (max-width: $tablet) {
+      font-size: 14px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 16px 22px;
+    @media (max-width: $tablet) {
+      gap: 13px 17px;
+    }
+
+    li {
+      a {
+        height: 17px;
+        display: inline-block;
+        max-width: 20px;
+        @media (max-width: $tablet) {
+          height: 14px;
+          max-width: 17px;
+        }
+        @media (hover: hover) {
+          &:hover {
+            svg {
+              fill: var(--blue);
+            }
+          }
+        }
+
+        svg {
+          max-width: 100%;
+          transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+          fill: var(--white);
+          max-height: 100%;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    line-height: 120%;
+    position: relative;
+    @media (max-width: $tablet) {
+      font-size: 10px;
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 13px;
+    }
+  }
+
+
+  &__bottom-list {
+    display: flex;
+    gap: 25px;
+    justify-self: start;
+
+
+    a {
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      @media (hover: hover) {
+        &:hover {
+          color: var(--white);
+        }
+      }
+    }
+  }
+
+  &__copy {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    @media (max-width: $tablet) {
+      font-size: 8px;
+    }
+    @media (max-width: $mobile) {
+      position: relative;
+      left: auto;
+      transform: translateX(0);
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Sign Up"
+})
+<body>
+<div class="wrapper wrapper_grey">
+    @@include('html/_header-log.htm',{})
+    <main class="page">
+        <div class="sign">
+            <div class="sign__container">
+                <form action="#" class="sign__form sign-form">
+                    <h2 class="sign-form__title mb-12-xs">
+                        Email address verification
+                    </h2>
+                    <div class="sign-form__descr">
+                        We need to verify your email address before you can access
+                    </div>
+                    <button class="sign-form__button button">
+                        Resend a request
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+@@include('html/_js.htm',{})
+</body>
+</html>

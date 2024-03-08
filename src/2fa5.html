@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"2fa"
+})
+<body>
+<div class="wrapper wrapper_grey">
+    @@include('html/_header-log.htm',{})
+    <main class="page">
+        <div class="sign">
+            <div class="sign__container">
+                <form action="#" class="sign__fa fa-form">
+                    <div class="fa-form__title2">
+                        Enter your recovery code
+                    </div>
+                    <div class="sign-form__items">
+                        <label class="input-item">
+                            <span class="input-item__label">Code</span>
+                            <input type="text" class="input" placeholder="0000-0000">
+                        </label>
+                    </div>
+                    <button class="button-gradient fa-form__button _fw">
+                        Confirm
+                    </button>
+                    <div class="fa-form__link-bottom">
+                        <a href="" data-popup="#fa">I lost access to my codes</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+@@include('html/_js.htm',{})
+@@include('html/_popup.htm',{})
+</body>
+</html>

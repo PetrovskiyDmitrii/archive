@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" class="page-admin">
+@@include('html/_head.htm',{
+"title":"Dashboard5"
+})
+<body>
+<div class="admin">
+    @@include('html/_header-admin.htm',{})
+    <div class="admin__row">
+        @@include('html/_aside.htm',{})
+        <div class="admin__main">
+            <div class="admin__body admin__body_secondary">
+                @@include('html/_header-pc-admin.htm',{"title":"Dashboard"})
+                <div class="admin__dashboard dashboard">
+                    <div class="dash-order dash-order_small">
+                        <div class="dash-order__title">
+                            Payment Order
+                        </div>
+                        <div class="dash-order__subtitle">
+                            Please make sure that you send currency to the specified wallet in the selected currency.
+                            Otherwise we can't help you.
+                        </div>
+                        <div class="dash-order__right">
+                            <div class="dash-order__table table-dash">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="table-dash__label">
+                                                Order ID:
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="table-dash__copy-wrap">
+                                                    <span
+                                                            class="table-dash__copy-value">23561q34612346457654675648678409247</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table-dash__label">
+                                                Date:
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="table-dash__value">
+                                                01-01-2022 19:43
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="table-dash__label">
+                                                Status:
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="table-dash__value">
+                                                <div class="table-dash__status waiting">
+                                                    Waiting
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table-dash__label">
+                                                Payment method:
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="table-dash__value">
+                                                BTC
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table-dash__label">
+                                                Received:
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="table-dash__value">
+                                                $340
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table-dash__label">
+                                                Total amount:
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="table-dash__value">
+                                                0.00000055 BTC<p class="table-dash__small-text">$345
+                                            </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table-dash__label">
+                                                Details:
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="table-dash__value">
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+                            <div class="dash-order__bottom-text">
+                                Commission Sav Holdings Group, In Chicago DR: Declined due to Card Status: Lost card
+                                (Capture)(Issuer will be charged if card is picked up) Gen: Pre-Authorization Request 41
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+@@include('html/_chart-libs.htm',{})
+@@include('html/_chart1.htm',{})
+
+
+</body>
+
+</html>

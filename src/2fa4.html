@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"2fa"
+})
+<body>
+<div class="wrapper wrapper_grey">
+    @@include('html/_header-log.htm',{})
+    <main class="page">
+        <div class="sign">
+            <div class="sign__container">
+                <form action="#" class="sign__fa fa-form">
+                    <div class="fa-form__icon">
+                        <img src="@img/svg/lock.svg" alt="">
+                    </div>
+                    <div class="fa-form__title2">
+                        Enter your authenticator
+                    </div>
+                    <div class="fa-form__item">
+                        <div data-otc class="otc">
+                            <fieldset>
+                                <legend>Validation Code</legend>
+                                <label for="otc-1">Number 1</label>
+                                <label for="otc-2">Number 2</label>
+                                <label for="otc-3">Number 3</label>
+                                <label for="otc-4">Number 4</label>
+                                <label for="otc-5">Number 5</label>
+                                <label for="otc-6">Number 6</label>
+                                <div>
+                                    <input type="number" pattern="[0-9]*" value=""
+                                           autocomplete="one-time-code" id="otc-1" required>
+                                    <input type="number" pattern="[0-9]*" min="0" max="9"
+                                           maxlength="1" value=""
+                                           id="otc-2" required>
+                                    <input type="number" pattern="[0-9]*" min="0" max="9"
+                                           maxlength="1" value=""
+                                           id="otc-3" required>
+                                    <input type="number" pattern="[0-9]*" min="0" max="9"
+                                           maxlength="1" value=""
+                                           id="otc-4" required>
+                                    <input type="number" pattern="[0-9]*" min="0" max="9"
+                                           maxlength="1" value=""
+                                           id="otc-5" required>
+                                    <input type="number" pattern="[0-9]*" min="0" max="9"
+                                           maxlength="1" value=""
+                                           id="otc-6" required>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                    </div>
+                    <button class="button-gradient fa-form__button _fw">
+                        Confirm
+                    </button>
+                    <div class="fa-form__link-bottom">
+                        <a href="">I have no access to the authenticator</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+@@include('html/_js.htm',{})
+</body>
+</html>

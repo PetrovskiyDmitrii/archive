@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" class="page-admin">
+@@include('html/_head.htm',{
+"title":"User4"
+})
+<body>
+<div class="admin">
+    @@include('html/_header-admin.htm',{})
+    <div class="admin__row">
+        @@include('html/_aside-user.htm',{})
+        <div class="admin__main">
+            <div class="admin__body admin__body_secondary">
+                @@include('html/_header-pc-admin.htm',{"title":"User"})
+                <div class="admin__user user">
+                    <form action="#" class="user-form">
+                        <div class="user-form__icon">
+                            <img src="@img/svg/lock2.svg" alt="">
+                        </div>
+                        <div class="user-form__title mb-8">
+                            Enter Code
+                        </div>
+                        <div class="user-form__descr">
+                            <p>Enter the code that was emailed to you to change your email</p>
+                        </div>
+                        <div class="user-form__items">
+                            <label class="input-item">
+                                <span class="input-item__label">Code</span>
+                                <input type="text" class="input">
+                            </label>
+                        </div>
+                        <div class="user-form__row">
+                            <div class="user-form__left-text">
+                                <p>Didn`t get the code?</p>
+                                <p data-timer="45" class="user-form__time">
+                                    00:45
+                                </p>
+                            </div>
+                            <a href="" class="button button_grey user-form__btn-small">Resend</a>
+                        </div>
+                        <button class="user-form__button button _fw">
+                            Next
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+@@include('html/_chart-libs.htm',{})
+@@include('html/_chart1.htm',{})
+</body>
+</html>

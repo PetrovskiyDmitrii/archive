@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" class="page-admin">
+@@include('html/_head.htm',{
+"title":"User"
+})
+<body>
+<div class="admin">
+    @@include('html/_header-admin.htm',{})
+    <div class="admin__row">
+        @@include('html/_aside-user.htm',{})
+        <div class="admin__main">
+            <div class="admin__body">
+                @@include('html/_header-pc-admin.htm',{"title":"User"})
+                <div class="admin__user user">
+                    <form action="#" class="user-main">
+                        <div class="user-main__block">
+                            <div class="user-main__head">
+                                <h4 class="user-main__title">
+                                    User Info
+                                </h4>
+                                <div data-da=".user-main,600,3" class="user-main__buttons">
+                                    <button class="button button_grey user-main__button">
+                                        Cancel
+                                    </button>
+                                    <button class="button  user-main__button">
+                                        Save
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="user-main__grid-layout">
+                                <label class="input-item">
+                                    <span class="input-item__label">Name</span>
+                                    <input value="John Baton" type="text" class="input">
+                                </label>
+                                <label class="input-item">
+                                    <span class="input-item__label">Telegram</span>
+                                    <input value="John Baton" type="text" class="input">
+                                </label>
+                                <label class="input-item">
+                                    <span class="input-item__label">Email</span>
+                                    <input value="John Baton" type="text" class="input">
+                                    <a href="" class="user-main__link">
+                                        <svg>
+                                            <use xlink:href="@img/icons/icons.svg#correct"></use>
+                                        </svg>
+                                    </a>
+                                </label>
+                                <label class="input-item">
+                                    <span class="input-item__label">Password</span>
+                                    <input value="John Baton" type="password" class="input">
+                                    <a href="" class="user-main__link">
+                                        <svg>
+                                            <use xlink:href="@img/icons/icons.svg#correct"></use>
+                                        </svg>
+                                    </a>
+                                </label>
+                            </div>
+                        </div>
+                        <div data-wallet class="user-main__block">
+                            <div class="user-main__head">
+                                <h4 class="user-main__title">
+                                    Wallet
+                                </h4>
+                            </div>
+                            <div class="user-main__grid-layout">
+                                <label class="input-item">
+                                    <span class="input-item__label">Currency</span>
+                                    <select data-wallet-select name="form[]" class="form">
+                                        <option value="TRC-20" selected>TRC-20</option>
+                                        <option value="TRC-201">TRC-201</option>
+                                        <option value="TRC-202">TRC-202</option>
+                                        <option value="TRC-203">TRC-203</option>
+                                    </select>
+
+                                </label>
+                                <label class="input-item">
+                                    <span class="input-item__label">Refund wallet address <span
+                                            data-wallet-value></span></span>
+                                    <input value="KH32523HUN23" type="text" class="input">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="user-main__block">
+                            <div class="user-main__head">
+                                <h4 class="user-main__title">
+                                    General
+                                </h4>
+                            </div>
+                            <div class="user-main__grid-layout">
+                                <label class="input-item">
+                                    <span class="input-item__label">Language</span>
+                                    <select name="form[]" class="form">
+                                        <option value="1" selected>English</option>
+                                        <option value="2">English</option>
+                                        <option value="3">English</option>
+                                        <option value="4">English</option>
+                                    </select>
+                                </label>
+                                <div class="user-main__chk">
+                                    <div class="checkbox">
+                                        <input data-security="#fa2" checked id="c_221" data-error="Ошибка"
+                                               class="checkbox__input"
+                                               type="checkbox"
+                                               value="1" name="form[]">
+                                        <label for="c_221" class="checkbox__label">
+                                            <span class="checkbox__circle"></span><span
+                                                class="checkbox__text">Google Authenticator</span></label>
+                                    </div>
+                                </div>
+                                <div class="user-main__chk">
+                                    <div class="checkbox">
+                                        <input data-security="#logout" checked id="c_2221" data-error="Ошибка"
+                                               class="checkbox__input"
+                                               type="checkbox"
+                                               value="1" name="form[]">
+                                        <label for="c_2221" class="checkbox__label">
+                                            <span class="checkbox__circle"></span><span
+                                                class="checkbox__text">Automatic logout</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+@@include('html/_chart-libs.htm',{})
+@@include('html/_chart1.htm',{})
+</body>
+</html>

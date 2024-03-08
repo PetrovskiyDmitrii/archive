@@ -1,0 +1,286 @@
+.header {
+  padding: 16px 0;
+  background: var(--white);
+
+  &_admin {
+    @media (min-width: $tablet) {
+      display: none;
+    }
+    @media (max-width: $tablet) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 4;
+    }
+
+
+    .icon-menu {
+      height: 15px;
+      width: 18px;
+
+      span {
+        width: 10px;
+      }
+
+      span,
+      &::before,
+      &::after {
+        background: #2D264B;
+        height: 2px;
+        border-radius: 4px;
+
+        .dark & {
+          background: #fff;
+        }
+      }
+
+      @media (max-width: $tablet) {
+        display: block;
+      }
+    }
+
+    .header__logo {
+
+      .dark {
+        display: none;
+
+        .dark & {
+          display: block;
+        }
+      }
+
+      .light {
+        display: none;
+
+        .light & {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__logo {
+    display: inline-flex;
+    align-items: center;
+
+    @media (max-width: $tablet) {
+      max-width: 100px;
+      min-height: 30px;
+    }
+    @media (max-width: $mobile) {
+      max-width: 80px;
+    }
+  }
+
+  &__menu {
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 54px;
+    @media (max-width: $tablet) {
+      gap: 36px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @media (max-width: $mobile) {
+      flex-direction: column-reverse;
+      gap: 24px;
+      padding: 0 20px;
+      max-width: 370px;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+
+  &__lang {
+  }
+
+  &__link {
+    line-height: math.div(19, 16);
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    @media (hover: hover) {
+      &:hover {
+        color: var(--blue);
+      }
+    }
+  }
+
+  &__button {
+    height: 52px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 22px 0;
+    font-weight: 500;
+    color: var(--white);
+    min-width: 157px;
+    backdrop-filter: blur(2.5px);
+    border-radius: 15px;
+    background: #111727;
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    line-height: math.div(15, 16);
+    @media (max-width: $tablet) {
+      min-width: 102px;
+      .header_login & {
+        height: 34px;
+        border-radius: 5px;
+        font-size: 12px;
+      }
+    }
+    @media (max-width: $mobile) {
+      height: 38px;
+      width: 100%;
+      border-radius: 5px;
+      justify-content: center;
+    }
+    @media (hover: hover) {
+      &:hover {
+        background: var(--blue);
+      }
+    }
+  }
+}
+
+.menu {
+  &__body {
+    @media (max-width: $mobile) {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 338px;
+      background: var(--white);
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      justify-content: space-between;
+      min-height: 206px;
+      max-height: 100%;
+      gap: 60px;
+      padding: 30px 0 24px;
+      transform: translateX(100%);
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      @media (max-width: $mobileSmall) {
+        width: 100%;
+      }
+      .menu-open & {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 42px;
+    @media (max-width: $tablet) {
+      gap: 20px;
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: 0px;
+      flex: 1 1 auto;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      @media (max-width: $mobile) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  &__link {
+    line-height: math.div(19, 16);
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    @media (max-width: $mobile) {
+      padding: 20px;
+      display: inline-block;
+
+    }
+    @media (hover: hover) {
+      &:hover {
+        color: var(--blue);
+      }
+    }
+  }
+}
+
+
+//Burger
+
+.icon-menu {
+  outline: none;
+  display: none;
+  @media (max-width: $mobile) {
+    display: block;
+  }
+  position: relative;
+  width: 22px;
+  height: 17px;
+  z-index: 6;
+  @media (any-hover: none) {
+    cursor: default;
+  }
+
+  span,
+  &::before,
+  &::after {
+    content: "";
+    transition: all 0.3s ease 0s;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 2.7px;
+    background: #111825;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  span {
+    top: calc(50% - rem(1));
+    width: 17px;
+  }
+
+  .menu-open & {
+    span {
+      width: 0;
+    }
+
+    &::before,
+    &::after {
+    }
+
+    &::before {
+      top: calc(50% - rem(1));
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      bottom: calc(50% - rem(1));
+      transform: rotate(45deg);
+    }
+  }
+}

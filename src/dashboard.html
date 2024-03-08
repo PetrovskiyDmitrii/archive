@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" class="page-admin">
+@@include('html/_head.htm',{
+"title":"Dashboard"
+})
+<body>
+<div class="admin">
+    @@include('html/_header-admin.htm',{})
+    <div class="admin__row">
+        @@include('html/_aside.htm')
+        <div class="admin__main">
+            <div class="admin__body">
+                @@include('html/_header-pc-admin.htm',{"title":"Dashboard"})
+                <div class="admin__dashboard dashboard">
+                    <div class="dashboard__top">
+                        <div class="dashboard__chart chart">
+                            <div class="chart__head chart-head">
+                                <div class="chart-head__left">
+                                    <div class="chart-head__title">
+                                        Spent
+                                    </div>
+                                    <div class="chart-head__value">
+                                        $15.231,<span>54</span>
+                                    </div>
+                                </div>
+                                <div class="chart-head__select">
+                                    <select data-class-modif="chart" name="form[]" class="form">
+                                        <option value="1" selected>Today</option>
+                                        <option value="2">Week</option>
+                                        <option value="3">Month</option>
+                                        <option value="4">Year</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <canvas id="myChart3"></canvas>
+                        </div>
+                        <div class="dashboard__card card-dash">
+                            <div class="card-dash__top">
+                                <div class="card-dash__row">
+                                    <div class="card-dash__column">
+                                        <p>Balance</p>
+                                        <b>$4322.89</b>
+                                    </div>
+                                    <div class="card-dash__column">
+                                        <p>Card Balance</p>
+                                        <b>$326.23</b>
+                                    </div>
+                                </div>
+                                <a href="" class="card-dash__button button">
+                                    Top Up
+                                </a>
+                                <div class="card-dash__image-ibg">
+                                    <img src="@img/main-img/card.png" alt="">
+                                </div>
+                            </div>
+                            <div data-rate="90" data-da=".dashboard__bottom-row,768,2" class="header-admin__rate">
+                                <div class="header-admin__row">
+                                    <span>Decline Rate</span>
+                                    <b>90%</b>
+                                </div>
+                                <div class="header-admin__line">
+                                    <span style="width: 90%"></span>
+                                </div>
+                            </div>
+                            <div data-da=".dashboard__bottom-row,768,3" class=" card-dash__table">
+                                <div class="card-dash__title">
+                                    Cards Limits
+                                </div>
+                                <div class="card-dash__rows">
+                                    <div class="card-dash__row">
+                                        <div class="card-dash__col1">
+                                            Active cards per team
+                                        </div>
+                                        <div class="card-dash__col2">
+                                            53 <span>/ 100</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-dash__row">
+                                        <div class="card-dash__col1">
+                                            My Active cards
+                                        </div>
+                                        <div class="card-dash__col2">
+                                            Unlimited
+                                        </div>
+                                    </div>
+                                    <div class="card-dash__row">
+                                        <div class="card-dash__col1">
+                                            Transactions
+                                        </div>
+                                        <div class="card-dash__col2">
+                                            1000$
+                                        </div>
+                                    </div>
+                                    <div class="card-dash__row">
+                                        <div class="card-dash__col1">
+                                            Available cards per day
+                                        </div>
+                                        <div class="card-dash__col2">
+                                            Unlimited
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="dashboard__bottom-row">
+                        <div class="dashboard__chart chart">
+                            <div class="chart__head chart-head">
+                                <div class="chart-head__left">
+                                    <div class="chart-head__title">
+                                        In Hold
+                                    </div>
+                                    <div class="chart-head__value green">
+                                        $22,542.<span>09</span>
+                                    </div>
+                                </div>
+                                <div class="chart-head__select">
+                                    <select data-class-modif="chart" name="form[]" class="form">
+                                        <option value="1" selected>Today</option>
+                                        <option value="2">Week</option>
+                                        <option value="3">Month</option>
+                                        <option value="4">Year</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <canvas id="myChart"></canvas>
+                        </div>
+                        <div class="dashboard__chart chart">
+                            <div class="chart__head chart-head">
+                                <div class="chart-head__left">
+                                    <div class="chart-head__title">
+                                        Payments
+                                    </div>
+                                    <div class="chart-head__value blue">
+                                        $22,542.<span>09</span>
+                                    </div>
+                                </div>
+                                <div class="chart-head__select">
+                                    <select data-class-modif="chart" name="form[]" class="form">
+                                        <option value="1" selected>Today</option>
+                                        <option value="2">Week</option>
+                                        <option value="3">Month</option>
+                                        <option value="4">Year</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <canvas id="myChart2"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="big-loader">
+    <div class="big-loader__logo">
+        <svg width="44" height="37" viewBox="0 0 44 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.5697 0.545166L22.4927 4.97764L3.98563 36.8527H0L20.5697 0.545166Z"/>
+            <path d="M20.1456 14.9309L22.6605 18.3275L12.738 35.693L8.56934 35.1904L20.1456 14.9309Z" fill="#3A63ED"/>
+            <path d="M29.453 28.4095L26.4445 24.879L22.5558 24.8616L20.0439 28.4095H29.453Z"/>
+            <path d="M39.8102 33.1551L34.6683 32.4066L18.6758 5.02806L20.5705 0.546143L39.8102 33.1551Z"
+            />
+            <path d="M40.9643 29.827L43.0556 25.2366L29.1713 0.327728L24.5283 0L40.9643 29.827Z" fill="#3A63ED"/>
+            <path d="M37.6744 36.9965L36.0261 33.5524L17.8457 33.3589L20.4515 36.9965H37.6744Z"/>
+            <path d="M39.8546 33.1809L35.6328 30.718L33.4506 34.5371L37.6723 37L39.8546 33.1809Z"/>
+        </svg>
+        <div class="big-loader__decor-circle">
+            <img class="light" src="@img/svg/loader1.svg" alt="">
+            <img class="dark" src="@img/svg/loader2.svg" alt="">
+        </div>
+    </div>
+</div>
+@@include('html/_toast.htm',{})
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+@@include('html/_chart-libs.htm',{})
+@@include('html/_chart1.htm',{})
+
+</body>
+
+</html>

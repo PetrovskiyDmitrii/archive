@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en" class="page-admin">
+@@include('html/_head.htm',{
+"title":"Transactions"
+})
+<body>
+<div class="admin">
+    @@include('html/_header-admin.htm',{})
+    <div class="admin__row">
+        @@include('html/_aside-tr.htm',{})
+        <div class="admin__main">
+            <div class="admin__body ">
+                @@include('html/_header-pc-admin.htm',{"title":"Transactions"})
+                <div class="admin__payments trans">
+                    <div class="trans__setting setting-trans">
+                        <div class="setting-trans__head">
+                            <h2 class="setting-trans__title">
+                                Settings
+                            </h2>
+                            <div data-da=".setting-trans,600,2" class="setting-trans__buttons">
+                                <a href="" class="button setting-trans__button button_grey">
+                                    Reset
+                                </a>
+                                <a href="" class="button setting-trans__button ">
+                                    Apply
+                                </a>
+                            </div>
+                        </div>
+                        <div class="setting-trans__grid-layout">
+                            <label data-calendar class="input-item">
+                                <span class="input-item__label">Date</span>
+                                <input data-calendar-toggle type="text" class="input">
+                                <div class="calendar calendar_input">
+                                    <div class="calendar__row">
+                                        <div class="calendar__buttons">
+                                            <button data-date="today" class="calendar__button">
+                                                Today
+                                            </button>
+                                            <button data-date="yesterday" data-yesterday
+                                                    class="calendar__button">
+                                                Yesterday
+                                            </button>
+                                            <button data-date="7day" class="calendar__button">
+                                                Last 7 Days
+                                            </button>
+                                            <button data-date="30day" class="calendar__button">
+                                                Last 30 Days
+                                            </button>
+                                            <button data-date="last30day" class="calendar__button">
+                                                Previous Month
+                                            </button>
+                                        </div>
+                                        <input data-flatpickr type="text" placeholder="Select Date.."
+                                               data-input>
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="input-item">
+                                <span class="input-item__label">Card</span>
+                                <select name="form[]" class="form">
+                                    <option value="1" selected>Card</option>
+                                    <option value="2">Card</option>
+                                    <option value="3">Card</option>
+                                    <option value="4">Card</option>
+                                </select>
+                            </label>
+                            <label class="input-item">
+                                <span class="input-item__label">Team</span>
+                                <select name="form[]" class="form">
+                                    <option value="1" selected>Team</option>
+                                    <option value="2">Team</option>
+                                    <option value="3">Team</option>
+                                    <option value="4">Team</option>
+                                </select>
+                            </label>
+                            <label class="input-item">
+                                <span class="input-item__label">User</span>
+                                <select name="form[]" class="form">
+                                    <option value="1" selected>User</option>
+                                    <option value="2">User</option>
+                                    <option value="3">User</option>
+                                    <option value="4">User</option>
+                                </select>
+                            </label>
+                            <label class="input-item">
+                                <span class="input-item__label">Status</span>
+                                <select name="form[]" class="form">
+                                    <option value="1" selected>Status</option>
+                                    <option value="2">Status</option>
+                                    <option value="3">Status</option>
+                                    <option value="4">Status</option>
+                                </select>
+                            </label>
+                            <label class="input-item">
+                                <span class="input-item__label">Bank</span>
+                                <select name="form[]" class="form">
+                                    <option value="1" selected>Bank</option>
+                                    <option value="2">Bank</option>
+                                    <option value="3">Bank</option>
+                                    <option value="4">Bank</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="trans__filter filter-trans">
+                        <div class="filter-trans__left">
+                            <div class="filter-trans__title">
+                                History
+                            </div>
+                        </div>
+                        <div class="filter-trans__right">
+                            <div class="filter-trans__info">
+                                <p>Transactions - <b>32523623</b></p>
+                                <p>Hold - <b>$32523623</b></p>
+                            </div>
+                            <div class="filter-trans__buttons">
+                                <a href="" class="table-filter__button">
+                                    Report
+                                </a>
+                                <div class="filter-trans__select">
+                                    <select name="form[]" data-class-modif="pagging" class="form">
+                                        <option value="1" selected>25</option>
+                                        <option value="2">50</option>
+                                        <option value="3">100</option>
+                                        <option value="4">200</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards__table table">
+                        <div class="table__main table__main_pay">
+                            <table>
+                                <tr>
+                                    <th>
+                                        Card
+                                    </th>
+                                    <th>User</th>
+                                    <th>Bank</th>
+                                    <th>Team</th>
+                                    <th>Status</th>
+                                    <th>Amount</th>
+                                    <th>************</th>
+                                    <th>Operation</th>
+                                    <th>Date</th>
+                                <tr/>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__card-trans">
+                                                <h4>Card</h4>
+                                                <p>*5643</p>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <p>exampleEXAMPLE@gmail.cpm</p>
+
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                Bank Name
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                Team
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress red">
+                                                    Error
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $125125.346
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $125125.346
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                Decline. <a href="">Show details ></a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__date">
+                                                    02-25-2023
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__card-trans">
+                                                <h4>Card</h4>
+                                                <p>*5643</p>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <p>exampleEXAMPLE@gmail.cpm</p>
+
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                Bank Name
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                Team
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress red">
+                                                    Error
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $125125.346
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $125125.346
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                Decline. <a href="">Show details ></a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__date">
+                                                    02-25-2023
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__card-trans">
+                                                <h4>Card</h4>
+                                                <p>*5643</p>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <p>exampleEXAMPLE@gmail.cpm</p>
+
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                Bank Name
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                Team
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress blue">
+                                                    Complete
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $125125.346
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $125125.346
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                Transfer of funds #435345
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__date">
+                                                    02-25-2023
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__card-trans">
+                                                <h4>Card</h4>
+                                                <p>*5643</p>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <p>exampleEXAMPLE@gmail.cpm</p>
+
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                Bank Name
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                Team
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress red">
+                                                    Error
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $125125.346
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $125125.346
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                Decline. <a href="">Show details ></a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__date">
+                                                    02-25-2023
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__card-trans">
+                                                <h4>Card</h4>
+                                                <p>*5643</p>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <p>exampleEXAMPLE@gmail.cpm</p>
+
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                Bank Name
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                Team
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress red">
+                                                    Error
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $125125.346
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $125125.346
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                Decline. <a href="">Show details ></a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__date">
+                                                    02-25-2023
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__card-trans">
+                                                <h4>Card</h4>
+                                                <p>*5643</p>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <p>exampleEXAMPLE@gmail.cpm</p>
+
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                Bank Name
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                Team
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress red">
+                                                    Error
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $125125.346
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $125125.346
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                Decline. <a href="">Show details ></a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__date">
+                                                    02-25-2023
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__card-trans">
+                                                <h4>Card</h4>
+                                                <p>*5643</p>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <p>exampleEXAMPLE@gmail.cpm</p>
+
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                Bank Name
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                Team
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress red">
+                                                    Error
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $125125.346
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $125125.346
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                Decline. <a href="">Show details ></a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__date">
+                                                    02-25-2023
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+@@include('html/_chart-libs.htm',{})
+@@include('html/_chart1.htm',{})
+</body>
+</html>

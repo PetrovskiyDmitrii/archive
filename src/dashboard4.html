@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" class="page-admin">
+@@include('html/_head.htm',{
+"title":"Dashboard4"
+})
+<body>
+<div class="admin">
+    @@include('html/_header-admin.htm',{})
+    <div class="admin__row">
+        @@include('html/_aside.htm',{})
+        <div class="admin__main">
+            <div class="admin__body admin__body_secondary">
+                @@include('html/_header-pc-admin.htm',{"title":"Dashboard"})
+                <div class="admin__dashboard dashboard">
+                    <div class="dash-order">
+                        <div class="dash-order__title">
+                            Top Up Order
+                        </div>
+                        <div class="dash-order__subtitle">
+                            Please make sure that you send currency to the specified wallet in the selected currency.
+                            Otherwise we will not be able to refund you
+                        </div>
+                        <div class="dash-order__row">
+                            <div data-copy class="dash-order__left">
+                                <span class="dash-order__label">Address</span>
+                                <div class="dash-order__code">
+                                    <img src="@img/svg/code2.svg" alt="">
+                                </div>
+
+                                <p data-copy-value="gJRs95nqV4VoGvxxdrkYAfMuvuH7T7JYAfMuvuH7T7J"
+                                   class="dash-order__value">jdfhtymdlti24834jdfgutj231sdnb9543231</p>
+                                <button data-copy-btn class="button button--dark dash-order__copy-btn">
+                                    Copy
+                                    <svg>
+                                        <use xlink:href="@img/icons/icons.svg#copy"></use>
+                                    </svg>
+                                </button>
+                                <div class="dash-order__time">
+                                    <p> Valid through</p>
+                                    <div data-timer="1200,'time expired'" class="dash-order__timer">
+                                        8:00:59
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dash-order__right">
+                                <div class="dash-order__table table-dash">
+                                    <table>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="table-dash__label">
+                                                    Order ID:
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div data-copy class="table-dash__copy-wrap">
+                                                    <button data-copy-btn class="table-dash__copy">
+                                                        <svg>
+                                                            <use xlink:href="@img/icons/icons.svg#copy"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <span data-copy-value="12212121409247"
+                                                          class="table-dash__copy-value">212122212121409247</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="table-dash__label">
+                                                    Date:
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="table-dash__value">
+                                                    01-01-2022 19:43
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="table-dash__label">
+                                                    Payment method:
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="table-dash__value">
+                                                    BTC
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="table-dash__label">
+                                                    Status:
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="table-dash__value">
+                                                    <div class="table-dash__status waiting">
+                                                        Waiting
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="table-dash__label">
+                                                    Commission
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="table-dash__value">
+                                                    4%
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                                <div class="dash-order__divided"></div>
+                                <div class="dash-order__table table-dash">
+                                    <table>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="table-dash__label">
+                                                    I`m sending
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div data-copy class="table-dash__copy-wrap">
+                                                    <button data-copy-btn class="table-dash__copy">
+                                                        <svg>
+                                                            <use xlink:href="@img/icons/icons.svg#copy"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <span data-copy-value="0.00000055">0.00000055 BTC</span>
+                                                </div>
+                                                <div class="table-dash__small-text">$345</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="table-dash__label">
+                                                    I`m recieve
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="table-dash__value">
+                                                    $340
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <a href="" class="dash-order__button button button_border-red">
+                                    Cancel
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+@@include('html/_chart-libs.htm',{})
+@@include('html/_chart1.htm',{})
+
+</body>
+
+</html>

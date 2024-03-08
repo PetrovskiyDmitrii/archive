@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en" class="page-admin">
+@@include('html/_head.htm',{
+"title":"Payments"
+})
+<body>
+<div class="admin">
+    @@include('html/_header-admin.htm',{})
+    <div class="admin__row">
+        @@include('html/_aside-pay.htm',{})
+        <div class="admin__main">
+            <div class="admin__body ">
+                @@include('html/_header-pc-admin.htm',{"title":"Payments"})
+                <div class="admin__payments pay">
+                    <div class="cards__table table">
+                        <div data-table-hide class="table__top">
+                            <div class="table-filter ">
+                                <div class="table-filter__left">
+                                    <div class="table-filter__title">
+                                        Balance History
+                                    </div>
+                                    <a href="" class="table-filter__button mob-w100">
+                                        Report
+                                    </a>
+                                </div>
+                                <div class="table-filter__right">
+                                    <div class="table-filter__actions">
+                                        <a href="" class="table-filter__link">
+                                            <svg>
+                                                <use xlink:href="@img/icons/icons.svg#reload"></use>
+                                            </svg>
+                                        </a>
+                                        <select data-class-modif="user" data-pseudo-label="user" name="form[]"
+                                                class="form">
+                                            <option value=""></option>
+                                            <option value="1">All Users</option>
+                                            <option data-asset="example@gmail.com" value="2">John Baton -</option>
+                                            <option data-asset="example@gmail.com" value="3">John Baton -</option>
+                                            <option data-asset="example@gmail.com" value="4">John Baton -</option>
+                                        </select>
+                                        <div data-calendar
+                                             class="table-filter__calendar">
+                                            <button data-calendar-toggle class="table-filter__link">
+                                                <svg>
+                                                    <use xlink:href="@img/icons/icons.svg#calendar"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="calendar">
+                                                <div class="calendar__row">
+                                                    <div class="calendar__buttons">
+                                                        <button data-date="today" class="calendar__button">
+                                                            Today
+                                                        </button>
+                                                        <button data-date="yesterday" data-yesterday
+                                                                class="calendar__button">
+                                                            Yesterday
+                                                        </button>
+                                                        <button data-date="7day" class="calendar__button">
+                                                            Last 7 Days
+                                                        </button>
+                                                        <button data-date="30day" class="calendar__button">
+                                                            Last 30 Days
+                                                        </button>
+                                                        <button data-date="last30day" class="calendar__button">
+                                                            Previous Month
+                                                        </button>
+                                                    </div>
+                                                    <input data-flatpickr type="text" placeholder="Select Date.."
+                                                           data-input>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-filter__filter">
+                                        <div class="filter">
+                                            <div class="filter__title">
+                                                <div class="filter__value">
+                                                    <svg>
+                                                        <use xlink:href="@img/icons/icons.svg#filter2"></use>
+                                                    </svg>
+                                                    Status
+                                                </div>
+                                                <div class="filter__arrow">
+                                                    <svg>
+                                                        <use xlink:href="@img/icons/icons.svg#arrow"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="filter__body">
+                                                <div class="filter__item">
+                                                    <div class="checkbox2">
+                                                        <input id="c1_1" data-error="Ошибка" class="checkbox2__input"
+                                                               type="checkbox" value="1" name="form[]">
+                                                        <label for="c1_1" class="checkbox2__label"><span
+                                                                class="checkbox2__text">Paused</span></label>
+                                                    </div>
+                                                </div>
+                                                <div class="filter__item">
+                                                    <div class="checkbox2">
+                                                        <input id="c1_11" data-error="Ошибка" class="checkbox2__input"
+                                                               type="checkbox" value="1" name="form[]">
+                                                        <label for="c1_11" class="checkbox2__label"><span
+                                                                class="checkbox2__text">Blocked</span></label>
+                                                    </div>
+                                                </div>
+                                                <div class="filter__item">
+                                                    <div class="checkbox2">
+                                                        <input id="c1_12" data-error="Ошибка" class="checkbox2__input"
+                                                               type="checkbox" value="1" name="form[]">
+                                                        <label for="c1_12" class="checkbox2__label"><span
+                                                                class="checkbox2__text">Show All</span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-filter__filter mob-none">
+                                        <div class="filter">
+                                            <div class="filter__title">
+                                                <div class="filter__value">
+                                                    <svg>
+                                                        <use xlink:href="@img/icons/icons.svg#filter2"></use>
+                                                    </svg>
+                                                    Event
+                                                </div>
+                                                <div class="filter__arrow">
+                                                    <svg>
+                                                        <use xlink:href="@img/icons/icons.svg#arrow"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="filter__body">
+                                                <div class="filter__item">
+                                                    <div class="checkbox2">
+                                                        <input id="c1_1112" data-error="Ошибка" class="checkbox2__input"
+                                                               type="checkbox" value="1" name="form[]">
+                                                        <label for="c1_1112" class="checkbox2__label"><span
+                                                                class="checkbox2__text">Paused</span></label>
+                                                    </div>
+                                                </div>
+                                                <div class="filter__item">
+                                                    <div class="checkbox2">
+                                                        <input id="c1_111" data-error="Ошибка" class="checkbox2__input"
+                                                               type="checkbox" value="1" name="form[]">
+                                                        <label for="c1_111" class="checkbox2__label"><span
+                                                                class="checkbox2__text">Blocked</span></label>
+                                                    </div>
+                                                </div>
+                                                <div class="filter__item">
+                                                    <div class="checkbox2">
+                                                        <input id="c1_122" data-error="Ошибка" class="checkbox2__input"
+                                                               type="checkbox" value="1" name="form[]">
+                                                        <label for="c1_122" class="checkbox2__label"><span
+                                                                class="checkbox2__text">Show All</span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table__main table__main_pay">
+                            <table>
+                                <tr>
+                                    <th>
+                                        ID
+                                    </th>
+                                    <th>Status</th>
+                                    <th>User</th>
+                                    <th>Balance</th>
+                                    <th>Amount</th>
+                                    <th>Operation</th>
+                                    <th>Date</th>
+                                <tr/>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                123445213
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress yellow">
+                                                    In Progress
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                Rick Owens
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__date">
+                                                    02-25-2023
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                123445213
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress green">
+                                                    Waiting
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                Rick Owens
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__date">
+                                                    02-25-2023
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                123445213
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress yellow">
+                                                    Cancel
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                Rick Owens
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__date">
+                                                    02-25-2023
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                123445213
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress red">
+                                                    Closed
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                Rick Owens
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__date">
+                                                    02-25-2023
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                123445213
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress blue">
+                                                    Complete
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                Rick Owens
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__date">
+                                                    02-25-2023
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                123445213
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress yellow">
+                                                    In Progress
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                Rick Owens
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__date">
+                                                    02-25-2023
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                123445213
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress green">
+                                                    Waiting
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                Rick Owens
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__date">
+                                                    02-25-2023
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                123445213
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress yellow">
+                                                    Cancel
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                Rick Owens
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__date">
+                                                    02-25-2023
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                123445213
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress red">
+                                                    Closed
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                Rick Owens
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__date">
+                                                    02-25-2023
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                123445213
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress blue">
+                                                    Complete
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                Rick Owens
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15643.04
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__date">
+                                                    02-25-2023
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table__pagging pagging">
+                            <a href="" class="pagging__arrow prev">
+                                <img src="@img/icons/arrow.svg" alt="">
+                            </a>
+                            <ul class="pagging__list">
+                                <li>
+                                    <a href="" class="active">
+                                        1
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        2
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        3
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        ...
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        546
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="" class="pagging__arrow next">
+                                <img src="@img/icons/arrow.svg" alt="">
+                            </a>
+                            <div class="pagging__select">
+                                <select name="form[]" data-class-modif="pagging" class="form">
+                                    <option value="1" selected>25</option>
+                                    <option value="2">50</option>
+                                    <option value="3">100</option>
+                                    <option value="4">200</option>
+                                </select>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+@@include('html/_chart-libs.htm',{})
+@@include('html/_chart1.htm',{})
+</body>
+</html>

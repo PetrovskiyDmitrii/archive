@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" class="page-admin">
+@@include('html/_head.htm',{
+"title":"Dashboard2"
+})
+<body>
+<div class="admin">
+    @@include('html/_header-admin.htm',{})
+    <div class="admin__row">
+        @@include('html/_aside.htm',{})
+        <div class="admin__main">
+            <div class="admin__body admin__body_secondary">
+                @@include('html/_header-pc-admin.htm',{"title":"Dashboard"})
+                <div class="admin__dashboard dashboard">
+                    <form action="#" class="dash-form">
+                        <div class="dash-form__title">
+                            Top Up
+                        </div>
+                        <div class="dash-form__subtitle">
+                            Minimum deposit amount - $50
+                        </div>
+                        <div class="dash-form__items">
+                            <label class="input-item">
+                                <span class="input-item__label">Payment method</span>
+                                <select name="form[]" class="form">
+                                    <option value="1" selected>USDT (TRC-20)</option>
+                                    <option value="2">USDT (TRC-20)</option>
+                                    <option value="3">USDT (TRC-20)</option>
+                                    <option value="4">USDT (TRC-20)</option>
+                                </select>
+
+                            </label>
+                            <label class="input-item">
+                                <span class="input-item__label">Amount</span>
+                                <input value="5000" type="text" class="input">
+                            </label>
+                            <label class="input-item">
+                                <span class="input-item__label">Address</span>
+                                <input value="43tersgbdfv54v645huGN7g67GH7gh" type="text" class="input">
+                            </label>
+                        </div>
+                        <div class="dash-form__attention">
+                            <p><b>Attention!</b> Check your wallet address and currency type to avoid the wrong
+                                transaction.
+                                Transaction
+                                may take some time.</p>
+                            <span class="dash-form__icon">
+                                <img src="@img/svg/!.svg" alt="">
+                            </span>
+                        </div>
+                        <button class="button-gradient dash-form__button">
+                            Withdraw
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+@@include('html/_chart-libs.htm',{})
+@@include('html/_chart1.htm',{})
+
+</body>
+
+</html>

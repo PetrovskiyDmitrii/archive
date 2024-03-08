@@ -1,0 +1,33 @@
+<script src="js/app.min.js"></script>
+<script>
+    const popupOpen = (id) => {
+        document.body.insertAdjacentHTML(
+            "beforeend",
+            `<a href="" id="btn-${id}" data-popup="#${id}"></a>`
+        );
+        const selector = document.querySelector(`#btn-${id}`);
+        if (selector) {
+            selector.hidden = true;
+            selector.click();
+            selector.remove();
+        }
+    };
+    const openBigLoader = () => {
+        const loaderSel = document.querySelector('.big-loader')
+        if (loaderSel) {
+            loaderSel.classList.add('active')
+            document.documentElement.classList.add('lock')
+        } else {
+            console.log('loader not found on body')
+        }
+    }
+    const closeBigLoader = () => {
+        const loaderSel = document.querySelector('.big-loader')
+        if (loaderSel) {
+            loaderSel.classList.remove('active')
+            document.documentElement.classList.remove('lock')
+        } else {
+            console.log('loader not found on body')
+        }
+    }
+</script>

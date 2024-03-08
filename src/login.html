@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Login"
+})
+<body>
+<div class="wrapper wrapper_grey">
+    @@include('html/_header-log.htm',{})
+    <main class="page">
+        <div class="sign">
+            <div class="sign__container">
+                <form action="#" class="sign__form sign-form"><h2 class="sign-form__title">
+                    Enter your account
+                </h2>
+                    <div class="sign-form__items">
+                        <label class="input-item">
+                            <span class="input-item__label">Email</span>
+                            <input type="text" class="input">
+                        </label>
+                        <label class="input-item">
+                            <span class="input-item__label">Password</span>
+                            <input type="password" class="input">
+                        </label>
+                    </div>
+
+                    <button class="sign-form__button button-gradient">
+                        Log In
+                    </button>
+                    <div class="sign-form__row">
+                        <a href="" class="sign-form__create">
+                            Create account
+                        </a>
+                        <a href="" class="sign-form__forgot">Forgot password?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+@@include('html/_js.htm',{})
+</body>
+</html>

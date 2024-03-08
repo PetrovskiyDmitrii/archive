@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en" class="page-admin">
+@@include('html/_head.htm',{
+"title":"Balance"
+})
+<body>
+<div class="admin">
+    @@include('html/_header-admin.htm',{})
+    <div class="admin__row">
+        @@include('html/_aside-balance.htm')
+        <div class="admin__main">
+            <div class="admin__body">
+                @@include('html/_header-pc-balance.htm',{"title":"Total Balance"})
+                <div class="admin__balance balance">
+                    <div class="balance__top">
+                        <div class="balance__top-column">
+                            <div class="balance-cards">
+                                <div class="balance-cards__column">
+                                    <div class="balance-cards__bg-baby-blue">
+                                        <div class="balance-cards__inner">
+                                            <div class="balance-cards__header">
+                                                <div class="balance-cards__row">
+                                                    <div data-action class="balance-cards__action balance-cards-action">
+                                                        <button data-action-btn class="balance-cards-action__button">
+                                                            <svg>
+                                                                <use xlink:href="@img/icons/icons.svg#actions"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <div data-action-items class="balance-cards-action__items">
+                                                            <a data-popup="#edit" href
+                                                               class="balance-cards-action__btn-item">
+                                                                <span>Edit</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#edit"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a data-popup="#pause" href
+                                                               class="balance-cards-action__btn-item">
+                                                                <span>Pause</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#pause"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a data-popup="#resume" href
+                                                               class="balance-cards-action__btn-item">
+                                                                <span>Resume</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#resume"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a data-popup="#block" href
+                                                               class="balance-cards-action__btn-item">
+                                                                <span>Block</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#block"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a data-popup="#limit" href
+                                                               class="balance-cards-action__btn-item">
+                                                                <span>Change Limit</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#wallet"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a data-popup="#owner" href
+                                                               class="balance-cards-action__btn-item">
+                                                                <span>Change Owner</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#owner"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a href class="balance-cards-action__btn-item">
+                                                                <span>History</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#history"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a data-popup="#archive" href
+                                                               class="balance-cards-action__btn-item">
+                                                                <span>Archive</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#archive"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a data-popup="#remove" href
+                                                               class="balance-cards-action__btn-item delete">
+                                                                <span>Delete</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#delete"></use>
+                                                                </svg>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="balance-cards__block">
+                                                        <div class="balance-cards__icon">
+                                                            <img class="dark-icon" src="@img/svg/visa-mastercard.svg"
+                                                                 alt="">
+                                                            <img class="white-icon"
+                                                                 src="@img/svg/mastercard-visa-white.svg"
+                                                                 alt="">
+                                                        </div>
+                                                        <div class="balance-cards__col">
+                                                            <div class="balance-cards__name">Bank 1</div>
+                                                            <div class="balance-cards__code">436797, 511023, 534092
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="balance-cards__percent">
+                                                    <div class="balance-cards__box">
+                                                        <div class="balance-cards__text">
+                                                            <svg>
+                                                                <use xlink:href="@img/icons/icons.svg#bank-card"></use>
+                                                            </svg>
+                                                            <span>3.5%</span>
+                                                        </div>
+                                                        <!-- <div class="balance-cards__panel">Top Up fee</div> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="balance-cards__body">
+                                                <div class="balance-cards__wrap">
+                                                    <!-- <div class="balance-cards__usd">$</div> -->
+                                                    <div class="balance-cards__price">$ 432552.<span>89</span></div>
+                                                </div>
+                                                <div class="balance-cards__wrap">
+                                                    <div class="balance-cards__desc">Card Balance:</div>
+                                                    <div class="balance-cards__price-min">$432552.<span>89</span></div>
+                                                </div>
+                                                <div class="balance-cards__wrap">
+                                                    <div class="balance-cards__desc">Available Balance:</div>
+                                                    <div class="balance-cards__price-min">$432552.<span>89</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="balance-cards__footer">
+                                                <a href class="balance-cards__link">
+                                                    <svg class="balance-cards__top-up">
+                                                        <use xlink:href="@img/icons/icons.svg#top-up"></use>
+                                                    </svg>
+                                                    <span>Top Up</span>
+                                                </a>
+                                                <a href class="balance-cards__link">
+                                                    <svg class="balance-cards__withdraw">
+                                                        <use xlink:href="@img/icons/icons.svg#withdraw"></use>
+                                                    </svg>
+                                                    <span>Withdraw</span>
+                                                </a>
+                                                <a href data-popup="#tran" class="balance-cards__link">
+                                                    <svg class="balance-cards__transfer">
+                                                        <use xlink:href="@img/icons/icons.svg#transfer"></use>
+                                                    </svg>
+                                                    <span>Transfer</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="balance-cards__column">
+                                    <div class="balance-cards__bg-violet">
+                                        <div class="balance-cards__inner">
+                                            <div class="balance-cards__header">
+                                                <div class="balance-cards__row">
+                                                    <div data-action class="balance-cards__action balance-cards-action">
+                                                        <button data-action-btn class="balance-cards-action__button">
+                                                            <svg>
+                                                                <use xlink:href="@img/icons/icons.svg#actions"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <div data-action-items class="balance-cards-action__items">
+                                                            <a data-popup="#edit" href
+                                                               class="balance-cards-action__btn-item">
+                                                                <span>Edit</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#edit"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a data-popup="#pause" href
+                                                               class="balance-cards-action__btn-item">
+                                                                <span>Pause</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#pause"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a data-popup="#resume" href
+                                                               class="balance-cards-action__btn-item">
+                                                                <span>Resume</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#resume"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a data-popup="#block" href
+                                                               class="balance-cards-action__btn-item">
+                                                                <span>Block</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#block"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a data-popup="#limit" href
+                                                               class="balance-cards-action__btn-item">
+                                                                <span>Change Limit</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#wallet"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a data-popup="#owner" href
+                                                               class="balance-cards-action__btn-item">
+                                                                <span>Change Owner</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#owner"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a href class="balance-cards-action__btn-item">
+                                                                <span>History</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#history"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a data-popup="#archive" href
+                                                               class="balance-cards-action__btn-item">
+                                                                <span>Archive</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#archive"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a data-popup="#remove" href
+                                                               class="balance-cards-action__btn-item delete">
+                                                                <span>Delete</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#delete"></use>
+                                                                </svg>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="balance-cards__block">
+                                                        <div class="balance-cards__icon">
+                                                            <img class="dark-icon" src="@img/svg/master.svg" alt="">
+                                                            <img class="white-icon" src="@img/svg/master-white.svg"
+                                                                 alt="">
+                                                        </div>
+                                                        <div class="balance-cards__col">
+                                                            <div class="balance-cards__name">Bank 2</div>
+                                                            <div class="balance-cards__code">532237</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="balance-cards__percent">
+                                                    <div class="balance-cards__box">
+                                                        <div class="balance-cards__text">
+                                                            <svg>
+                                                                <use xlink:href="@img/icons/icons.svg#bank-card"></use>
+                                                            </svg>
+                                                            <span>3.5%</span>
+                                                        </div>
+                                                        <!-- <div class="balance-cards__panel">Top Up fee</div> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="balance-cards__body">
+                                                <div class="balance-cards__wrap">
+                                                    <div class="balance-cards__price">$ 432552.<span>89</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="balance-cards__footer">
+                                                <a href class="balance-cards__link">
+                                                    <svg class="balance-cards__top-up">
+                                                        <use xlink:href="@img/icons/icons.svg#top-up"></use>
+                                                    </svg>
+                                                    <span>Top Up</span>
+                                                </a>
+                                                <a href class="balance-cards__link">
+                                                    <svg class="balance-cards__withdraw">
+                                                        <use xlink:href="@img/icons/icons.svg#withdraw"></use>
+                                                    </svg>
+                                                    <span>Withdraw</span>
+                                                </a>
+                                                <a href data-popup="#tran" class="balance-cards__link">
+                                                    <svg class="balance-cards__transfer">
+                                                        <use xlink:href="@img/icons/icons.svg#transfer"></use>
+                                                    </svg>
+                                                    <span>Transfer</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="balance-cards__column">
+                                    <div class="balance-cards__bg-red">
+                                        <div class="balance-cards__inner">
+                                            <div class="balance-cards__header">
+                                                <div class="balance-cards__row">
+                                                    <div data-action class="balance-cards__action balance-cards-action">
+                                                        <button data-action-btn class="balance-cards-action__button">
+                                                            <svg>
+                                                                <use xlink:href="@img/icons/icons.svg#actions"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <div data-action-items class="balance-cards-action__items">
+                                                            <a data-popup="#edit" href
+                                                               class="balance-cards-action__btn-item">
+                                                                <span>Edit</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#edit"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a data-popup="#pause" href
+                                                               class="balance-cards-action__btn-item">
+                                                                <span>Pause</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#pause"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a data-popup="#resume" href
+                                                               class="balance-cards-action__btn-item">
+                                                                <span>Resume</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#resume"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a data-popup="#block" href
+                                                               class="balance-cards-action__btn-item">
+                                                                <span>Block</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#block"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a data-popup="#limit" href
+                                                               class="balance-cards-action__btn-item">
+                                                                <span>Change Limit</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#wallet"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a data-popup="#owner" href
+                                                               class="balance-cards-action__btn-item">
+                                                                <span>Change Owner</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#owner"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a href class="balance-cards-action__btn-item">
+                                                                <span>History</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#history"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a data-popup="#archive" href
+                                                               class="balance-cards-action__btn-item">
+                                                                <span>Archive</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#archive"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a data-popup="#remove" href
+                                                               class="balance-cards-action__btn-item delete">
+                                                                <span>Delete</span>
+                                                                <svg>
+                                                                    <use xlink:href="@img/icons/icons.svg#delete"></use>
+                                                                </svg>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="balance-cards__block">
+                                                        <div class="balance-cards__icon">
+                                                            <img class="dark-icon" src="@img/svg/visa.svg" alt="">
+                                                            <img class="white-icon" src="@img/svg/visa-white.svg"
+                                                                 alt="">
+                                                        </div>
+                                                        <div class="balance-cards__col">
+                                                            <div class="balance-cards__name">Bank 3</div>
+                                                            <div class="balance-cards__code">474366</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="balance-cards__percent">
+                                                    <div class="balance-cards__box">
+                                                        <div class="balance-cards__text">
+                                                            <svg>
+                                                                <use xlink:href="@img/icons/icons.svg#bank-card"></use>
+                                                            </svg>
+                                                            <span>3.5%</span>
+                                                        </div>
+                                                        <!-- <div class="balance-cards__panel">Top Up fee</div> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="balance-cards__body">
+                                                <div class="balance-cards__wrap">
+                                                    <div class="balance-cards__price">$ 432552.<span>89</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="balance-cards__footer">
+                                                <a href class="balance-cards__link">
+                                                    <svg class="balance-cards__top-up">
+                                                        <use xlink:href="@img/icons/icons.svg#top-up"></use>
+                                                    </svg>
+                                                    <span>Top Up</span>
+                                                </a>
+                                                <a href class="balance-cards__link">
+                                                    <svg class="balance-cards__withdraw">
+                                                        <use xlink:href="@img/icons/icons.svg#withdraw"></use>
+                                                    </svg>
+                                                    <span>Withdraw</span>
+                                                </a>
+                                                <a href data-popup="#tran" class="balance-cards__link">
+                                                    <svg class="balance-cards__transfer">
+                                                        <use xlink:href="@img/icons/icons.svg#transfer"></use>
+                                                    </svg>
+                                                    <span>Transfer</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="balance__filter filter-balance">
+                        <div class="filter-balance__left">
+                            <div class="filter-balance__title">
+                                Last Transactions
+                            </div>
+                        </div>
+                        <div class="filter-balance__right">
+                            <div class="filter-balance__buttons">
+                                <a href class="table-filter__button">
+                                    Report
+                                </a>
+                                <div class="filter-trans__select">
+                                    <select name="form[]" data-class-modif="pagging" class="form">
+                                        <option value="1" selected>25</option>
+                                        <option value="2">50</option>
+                                        <option value="3">100</option>
+                                        <option value="4">200</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="balance__table table">
+                        <div class="table__main table__main_pay">
+                            <table>
+                                <tr>
+                                    <th>Bank</th>
+                                    <th>Operation</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                </tr>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <img src="@img/svg/min-visa.svg" alt="">
+                                            <div class="table__card-balance">
+                                                <h4>Bank 1</h4>
+                                                <p>437546</p>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                Deposit
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <div class="table__cell-text green">
+                                                125125.346$
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress blue">
+                                                    Complete
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__date">
+                                                    01-01-2022
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__time">
+                                                    14:34:55
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <img src="@img/svg/visa-master-min.svg" alt="">
+                                            <div class="table__card-balance">
+                                                <h4>Bank 1</h4>
+                                                <p>437546</p>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                Withdraw
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <div class="table__cell-text">
+                                                -125125.346$
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress red">
+                                                    Error
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__date">
+                                                    01-01-2022
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__time">
+                                                    14:34:55
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <img src="@img/svg/master-min.svg" alt="">
+                                            <div class="table__card-balance">
+                                                <h4>Bank 1</h4>
+                                                <p>437546</p>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                Transfer
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <div class="table__cell-text">
+                                                125125.346$
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress yellow">
+                                                    Pending
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__date">
+                                                    01-01-2022
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__time">
+                                                    14:34:55
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <img src="@img/svg/min-visa.svg" alt="">
+                                            <div class="table__card-balance">
+                                                <h4>Bank 1</h4>
+                                                <p>437546</p>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                Deposit
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <div class="table__cell-text green">
+                                                125125.346$
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress blue">
+                                                    Complete
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__date">
+                                                    01-01-2022
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__time">
+                                                    14:34:55
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <img src="@img/svg/min-visa.svg" alt="">
+                                            <div class="table__card-balance">
+                                                <h4>Bank 1</h4>
+                                                <p>437546</p>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                Deposit
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <div class="table__cell-text green">
+                                                125125.346$
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress blue">
+                                                    Complete
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__date">
+                                                    01-01-2022
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__time">
+                                                    14:34:55
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <img src="@img/svg/min-visa.svg" alt="">
+                                            <div class="table__card-balance">
+                                                <h4>Bank 1</h4>
+                                                <p>437546</p>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                Deposit
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <div class="table__cell-text green">
+                                                125125.346$
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress blue">
+                                                    Complete
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__date">
+                                                    01-01-2022
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__time">
+                                                    14:34:55
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+@@include('html/_chart-libs.htm',{})
+@@include('html/_chart1.htm',{})
+</body>
+
+</html>

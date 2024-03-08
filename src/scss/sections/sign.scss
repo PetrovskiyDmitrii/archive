@@ -1,0 +1,235 @@
+.sign {
+    padding: 60px 0 100px;
+    @media (max-width: $tablet) {
+        padding-bottom: 70px;
+    }
+    @media (max-width: $mobile) {
+        padding-top: 32px;
+    }
+
+    &__container {
+    }
+
+    &__form {
+        max-width: 466px;
+        margin: 0 auto;
+    }
+}
+
+.sign-form {
+    padding: 32px 30px 28px;
+    width: 100%;
+    border-radius: 25px;
+    background: var(--white);
+    @media (max-width: $mobile) {
+        padding: 32px 22px 22px;
+    }
+
+    &__checkbox {
+        margin-top: 23px;
+        @media (max-width: $mobile) {
+            margin-top: 18px;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: math.div(29, 24);
+        font-family: var(--fontMontserrat);
+        @media (max-width: $mobile) {
+            font-size: 18px;
+
+        }
+
+
+        &:not(:last-child) {
+            margin-bottom: 28px;
+            @media (max-width: $mobile) {
+                margin-bottom: 25px;
+                &.mb-12-xs {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+
+    &__descr {
+        line-height: math.div(19, 16);
+        text-align: center;
+        color: rgba(17, 24, 37, 0.8);
+
+        b {
+            font-weight: 500;
+        }
+
+        a {
+            text-decoration: underline;
+            color: var(--blue);
+            transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+            @media (hover: hover) {
+                &:hover {
+                    color: var(--light-blue);
+                }
+            }
+        }
+
+        @media (max-width: $mobile) {
+            font-size: 14px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 60px;
+
+            &.mb-18 {
+                margin-bottom: 18px;
+                @media (max-width: $mobile) {
+                    margin-bottom: 24px;
+                }
+            }
+
+            @media (max-width: $mobile) {
+                margin-bottom: 35px;
+            }
+        }
+
+    }
+
+    &__items {
+        display: grid;
+        gap: 16px;
+
+        .input {
+            border: 1px solid rgba(61, 66, 79, 0.15);
+
+            &._form-error {
+                border: 1px solid #ED3A3A;
+            }
+        }
+    }
+
+    &__errors {
+        display: grid;
+        gap: 4px;
+        margin: 16px 0 0px;
+    }
+
+    &__error {
+        background: rgba(235, 54, 54, 0.15);
+        padding: 15px;
+        position: relative;
+        color: #373D43;
+        line-height: 130%;
+        @media (max-width: $mobile) {
+            padding: 11px 15px;
+            font-size: 14px;
+        }
+
+        &::after {
+            content: '';
+            width: 5px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #EB3636;
+        }
+    }
+
+    &__captcha {
+        margin: 16px 0 8px;
+    }
+
+    &__button {
+        width: 100%;
+        margin-top: 26px;
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__bottom-text {
+        color: #373D43;
+        text-align: center;
+        line-height: math.div(19, 16);
+        @media (max-width: $mobile) {
+            font-size: 14px;
+        }
+
+        a {
+            font-weight: 500;
+            color: var(--blue);
+            transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+
+            @media (hover: hover) {
+                &:hover {
+                    color: var(--light-blue);
+                }
+            }
+        }
+    }
+
+    &__text {
+        text-align: center;
+        line-height: math.div(19, 16);
+        color: rgba(17, 24, 37, 0.8);
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+            @media (max-width: $mobile) {
+                margin-bottom: 22px;
+            }
+        }
+
+        @media (max-width: $mobile) {
+            font-size: 14px;
+        }
+
+        a {
+            font-weight: 500;
+            color: var(--blue);
+            transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+            text-decoration: underline;
+            @media (hover: hover) {
+                &:hover {
+                    color: var(--light-blue);
+                }
+            }
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+        @media (max-width: $mobile) {
+            font-size: 14px;
+        }
+    }
+
+    &__forgot {
+        color: var(--blue);
+        font-weight: 500;
+        transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+        @media (hover: hover) {
+            &:hover {
+                color: var(--light-blue);
+            }
+        }
+    }
+
+    &__create {
+        line-height: math.div(19, 16);
+        transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+        @media (hover: hover) {
+            &:hover {
+                color: var(--blue);
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" class="page-admin">
+@@include('html/_head.htm',{
+"title":"Payments2"
+})
+<body>
+<div class="admin">
+    @@include('html/_header-admin.htm',{})
+    <div class="admin__row">
+        @@include('html/_aside-pay.htm',{})
+        <div class="admin__main">
+            <div class="admin__body admin__body_secondary">
+                @@include('html/_header-pc-admin.htm',{"title":"Payments"})
+                <div class="admin__payments pay">
+                    <div class="pay-up">
+                        <a href="" class="pay-up__btn-back">
+                            <svg width="8" height="15" viewBox="0 0 8 15" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 1L1 7.5L7 14"/>
+                            </svg>
+                        </a>
+                        <div class="pay-up__title">
+                            Top Up
+                        </div>
+                        <div class="pay-up__descr">
+                            PAYPAL*PAYMENT*CODE*15GV*ACCEPTED#16275216
+                        </div>
+                        <div class="pay-up__grid-layout">
+                            <div class="pay-up__item">
+                                <div class="pay-up__label">
+                                    ID
+                                </div>
+                                <div class="pay-up__content">
+                                    <p>123445213</p>
+                                </div>
+                            </div>
+                            <div class="pay-up__item">
+                                <div class="pay-up__label">
+                                    Status
+                                </div>
+                                <div class="pay-up__content">
+                                    <div class="pay-up__status blue">
+                                        Complete
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pay-up__item">
+                                <div class="pay-up__label">
+                                    Amount
+                                </div>
+                                <div class="pay-up__content">
+                                    <p> $3000.00</p>
+                                </div>
+                            </div>
+                            <div class="pay-up__item">
+                                <div class="pay-up__label">
+                                    Currency
+                                </div>
+                                <div class="pay-up__content">
+                                    <p> USDT (TRC-20)</p>
+                                </div>
+                            </div>
+                            <div class="pay-up__item">
+                                <div class="pay-up__label">
+                                    User
+                                </div>
+                                <div class="pay-up__content">
+                                    <p>
+                                        John Baton
+                                        <a href="mailto:example@gmail.com">example@gmail.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="pay-up__item">
+                                <div class="pay-up__label">
+                                    Date
+                                </div>
+                                <div class="pay-up__content">
+                                    <p> 01-01-2022</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+@@include('html/_chart-libs.htm',{})
+@@include('html/_chart1.htm',{})
+</body>
+</html>

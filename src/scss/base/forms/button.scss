@@ -1,0 +1,176 @@
+//<BUTTONS (a.btn+tab)>
+// Сніппет (HTML): btn
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 53px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fff;
+  background: var(--blue);
+  gap: 10px;
+  transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+  @media (max-width: $mobile) {
+    height: 43px;
+    font-size: 14px;
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      background: var(--light-blue);
+    }
+  }
+
+  &:disabled {
+    background: #3D424F;
+    pointer-events: none;
+  }
+
+  &._fw {
+    width: 100%;
+  }
+
+  &_border-red {
+    color: #ED3A3A;
+    border: 1px solid #ED3A3A;
+    border-radius: 5px;
+    background: var(--white);
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--white);
+        background: #ED3A3A;
+      }
+    }
+  }
+
+  &--dark {
+    background: #3D424F;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor
+    }
+  }
+
+  &_border-grey {
+    color: #3D424F;
+    border: 1px solid #3D424F;
+    border-radius: 5px;
+    background: var(--white);
+
+    .dark & {
+      border: 1px solid #ffffff;
+      color: #fff;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--white);
+        background: #3D424F;
+
+        .dark & {
+          color: #fff;
+        }
+
+      }
+    }
+  }
+
+  &_black {
+    background: #111828;
+  }
+
+  img {
+    width: 19px;
+    flex-shrink: 0
+  }
+
+  &_grey {
+    background: #3D424F;
+
+    .dark & {
+      background: #3D424F;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background: var(--blue);
+      }
+    }
+  }
+
+  &_red {
+    background: #ED3A3A;
+
+    @media (hover: hover) {
+      &:hover {
+        background: var(--blue);
+      }
+    }
+  }
+
+  &_border-blue {
+    height: 26px;
+    background: transparent;
+    color: var(--blue);
+    border: 1px solid #3862EC;
+    font-size: 14px;
+    padding: 0px 5px;
+    gap: 9px;
+    font-weight: 500;
+    @media (hover: hover) {
+      &:hover {
+        background: var(--blue);
+        color: #fff;
+
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+
+    svg {
+      width: 11px;
+      height: 15px;
+      flex-shrink: 0;
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      fill: var(--blue)
+    }
+  }
+}
+
+.button-gradient {
+  --x: 0%;
+  --c1: #3862EC;
+  --c2: #7692EA;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: linear-gradient(94.62deg, var(--c1, #f6d365), var(--c2, #fda085) 51%, var(--c1, #f6d365)) var(--x,0)/200%;
+  border-radius: 5px;
+  padding: 0px 20px;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+  height: 53px;
+  @media (max-width: $mobile) {
+    height: 43px;
+    font-size: 14px;
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      --x: 100%
+    }
+  }
+
+  &._fw {
+    width: 100%;
+  }
+}

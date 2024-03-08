@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" class="page-admin">
+@@include('html/_head.htm',{
+"title":"Tech works"
+})
+<body>
+<div class="admin">
+    @@include('html/_header-admin.htm',{})
+    <div class="admin__row">
+        @@include('html/_aside.htm',{})
+        <div class="admin__main">
+            <div class="admin__body admin__body_secondary">
+                @@include('html/_header-pc-admin.htm',{"title":"Technical works"})
+                <div class="tech">
+                    <div class="tech__title">
+                        The site is undergoing technical work
+                    </div>
+                    <div class="tech__descr">
+                        Apologize for the inconvenience. In order to improve the quality of service, we are making
+                        improvements
+                    </div>
+                    <div data-timer2 data-timer="100" class="tech__timer">
+                        <div class="tech__label">
+                            We are back in
+                        </div>
+                        <div class="tech__row">
+                            <div class="tech__column">
+                                <div class="tech__time">
+                                    <div data-hours class="tech__time-value">
+                                        00
+                                    </div>
+                                    <small>Hours</small>
+                                </div>
+                            </div>
+                            <div class="tech__column">
+                                <div class="tech__time">
+                                    <div data-minutes class="tech__time-value">
+                                        00
+                                    </div>
+                                    <small>Minutes</small>
+                                </div>
+                            </div>
+                            <div class="tech__column">
+                                <div class="tech__time">
+                                    <div data-seconds class="tech__time-value">
+                                        00
+                                    </div>
+                                    <small>Seconds</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tech__bottom">
+                        <div class="tech__bottom-label">
+                            You got a problem?
+                        </div>
+                        <a href="" class="tech__link">
+                            Support
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+</body>
+
+</html>

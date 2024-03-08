@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" class="page-admin">
+@@include('html/_head.htm',{
+"title":"Team edit"
+})
+<body>
+<div class="admin">
+    @@include('html/_header-admin.htm',{})
+    <div class="admin__row">
+        @@include('html/_aside-team.htm',{})
+        <div class="admin__main">
+            <div class="admin__body">
+                @@include('html/_header-pc-admin.htm',{"title":"Team"})
+                <div class="admin__user user">
+                    <form action="#" class="user-main">
+                        <div class="user-main__block">
+                            <div class="user-main__head">
+                                <h4 class="user-main__title">
+                                    Info
+                                </h4>
+                                <div data-da=".user-main,600,3" class="user-main__buttons">
+                                    <button class="button button_grey user-main__button">
+                                        Cancel
+                                    </button>
+                                    <button class="button  user-main__button">
+                                        Save
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="user-main__grid-layout">
+                                <label class="input-item">
+                                    <span class="input-item__label">Team</span>
+                                    <input value="Sick Affiliate" type="text" class="input">
+                                </label>
+                                <label class="input-item">
+                                    <span class="input-item__label">Cards Limit</span>
+                                    <div data-quantity class="quantity">
+                                        <div class="quantity__buttons">
+                                            <button data-quantity-plus type="button"
+                                                    class="quantity__button quantity__button_plus">
+                                                <svg width="15" height="8" viewBox="0 0 15 8" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1 7L7.5 1L14 7"/>
+                                                </svg>
+
+                                            </button>
+                                            <button data-quantity-minus type="button"
+                                                    class="quantity__button quantity__button_minus">
+                                                <svg width="15" height="8" viewBox="0 0 15 8" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1 1L7.5 7L14 1"/>
+                                                </svg>
+
+                                            </button>
+                                        </div>
+                                        <input data-quantity-value autocomplete="off"
+                                               type="text" class="input" name="form[]" value="100"></div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="user-main__block">
+                            <div class="user-main__head">
+                                <h4 class="user-main__title">
+                                    Groups
+                                </h4>
+                            </div>
+                            <div class="user-main__grid-layout">
+                                <label class="input-item">
+                                    <span class="input-item__label">Group</span>
+                                    <input value="Crypto" type="text" class="input input_team">
+                                    <span class="user-main__actions">
+                                        <span class="user-main__group">
+                                            12   <svg>
+                                                                                        <use xlink:href="@img/icons/icons.svg#user"></use>
+                                                                                    </svg>
+                                        </span>
+                                        <button data-popup="#remove-group" class="user-main__remove">
+                                            <svg>
+                                                <use xlink:href="@img/icons/icons.svg#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </span>
+                                </label>
+                                <label class="input-item">
+                                    <span class="input-item__label">Group</span>
+                                    <input value="Crypto" type="text" class="input input_team">
+                                    <span class="user-main__actions">
+                                        <span class="user-main__group">
+                                            12   <svg>
+                                                                                        <use xlink:href="@img/icons/icons.svg#user"></use>
+                                                                                    </svg>
+                                        </span>
+                                        <button data-popup="#remove-group" class="user-main__remove">
+                                            <svg>
+                                                <use xlink:href="@img/icons/icons.svg#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </span>
+                                </label>
+                                <label class="input-item">
+                                    <span class="input-item__label">Group</span>
+                                    <input value="Crypto" type="text" class="input input_team">
+                                    <span class="user-main__actions">
+                                        <span class="user-main__group">
+                                            12   <svg>
+                                                                                        <use xlink:href="@img/icons/icons.svg#user"></use>
+                                                                                    </svg>
+                                        </span>
+                                        <button data-popup="#remove-group" class="user-main__remove">
+                                            <svg>
+                                                <use xlink:href="@img/icons/icons.svg#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </span>
+                                </label>
+                                <label class="input-item">
+                                    <span class="input-item__label">Group</span>
+                                    <input value="Crypto" type="text" class="input input_team">
+                                    <span class="user-main__actions">
+                                        <span class="user-main__group">
+                                            12   <svg>
+                                                                                        <use xlink:href="@img/icons/icons.svg#user"></use>
+                                                                                    </svg>
+                                        </span>
+                                        <button data-popup="#remove-group" class="user-main__remove">
+                                            <svg>
+                                                <use xlink:href="@img/icons/icons.svg#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+@@include('html/_chart-libs.htm',{})
+@@include('html/_chart1.htm',{})
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"2fa"
+})
+<body>
+<div class="wrapper wrapper_grey">
+    @@include('html/_header-log.htm',{})
+    <main class="page">
+        <div class="sign">
+            <div class="sign__container">
+                <form action="#" class="sign__fa fa-form">
+                    <div class="fa-form__head">
+                        <h2 class="fa-form__title">
+                            Two-factor authentication
+                        </h2>
+                    </div>
+                    <div class="fa-form__descr">
+                        Scan the QR code through Google Authenticator to get the key
+                    </div>
+                    <div class="fa-form__code">
+                        <div class="fa-form__image-code">
+                            <img src="@img/svg/code.svg" alt="">
+                        </div>
+                        <div class="fa-form__label-code">Secret Key</div>
+                        <div class="fa-form__value-code">JKO4353456J34H</div>
+                    </div>
+                    <div class="fa-form__item">
+                        <div class="fa-form__label">
+                            Paste your Code
+                        </div>
+                        <div data-otc class="otc">
+                            <fieldset>
+                                <legend>Validation Code</legend>
+                                <label for="otc-1">Number 1</label>
+                                <label for="otc-2">Number 2</label>
+                                <label for="otc-3">Number 3</label>
+                                <label for="otc-4">Number 4</label>
+                                <label for="otc-5">Number 5</label>
+                                <label for="otc-6">Number 6</label>
+                                <div>
+                                    <input class="_form-error" type="number" pattern="[0-9]*" value=""
+                                           autocomplete="one-time-code" id="otc-1" required>
+                                    <input class="_form-error" type="number" pattern="[0-9]*" min="0" max="9"
+                                           maxlength="1" value=""
+                                           id="otc-2" required>
+                                    <input class="_form-error" type="number" pattern="[0-9]*" min="0" max="9"
+                                           maxlength="1" value=""
+                                           id="otc-3" required>
+                                    <input class="_form-error" type="number" pattern="[0-9]*" min="0" max="9"
+                                           maxlength="1" value=""
+                                           id="otc-4" required>
+                                    <input class="_form-error" type="number" pattern="[0-9]*" min="0" max="9"
+                                           maxlength="1" value=""
+                                           id="otc-5" required>
+                                    <input class="_form-error" type="number" pattern="[0-9]*" min="0" max="9"
+                                           maxlength="1" value=""
+                                           id="otc-6" required>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                    </div>
+                    <button class="button-gradient fa-form__button _fw">
+                        Confirm
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+@@include('html/_js.htm',{})
+</body>
+</html>

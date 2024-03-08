@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"2fa"
+})
+<body>
+<div class="wrapper wrapper_grey">
+    @@include('html/_header-log.htm',{})
+    <main class="page">
+        <div class="sign">
+            <div class="sign__container">
+                <form action="#" class="sign__fa fa-form fa-form_big">
+                    <div class="fa-form__head">
+                        <h2 class="fa-form__title">
+                            Two-factor authentication
+                        </h2>
+                        <a href="" download class="fa-form__link">
+                            <img src="@img/icons/download.svg" alt="">
+                            <span>Download</span>
+                        </a>
+                    </div>
+                    <div class="fa-form__descr">
+                        You can use recovery codes as a second factor to authenticate in case you lose access to your
+                        device.
+                    </div>
+                    <div class="fa-form__block">
+                        <h4>
+                            Keep your recovery codes in a safe spot
+                        </h4>
+                        <p>If you lose your device and can't find your recovery codes, you will lose access to your
+                            account. If you lose your codes, you can restore your account through tech support</p>
+                    </div>
+                    <div class="fa-form__row">
+                        <ul>
+                            <li>0000-0000</li>
+                            <li>0000-0000</li>
+                            <li>0000-0000</li>
+                            <li>0000-0000</li>
+                            <li>0000-0000</li>
+                            <li>0000-0000</li>
+                            <li>0000-0000</li>
+                            <li>0000-0000</li>
+                            <li>0000-0000</li>
+                            <li>0000-0000</li>
+                        </ul>
+                    </div>
+                    <button class="button-gradient fa-form__button _fw">
+                        I have saved my revovery codes
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+@@include('html/_js.htm',{})
+</body>
+</html>

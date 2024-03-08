@@ -1,0 +1,207 @@
+.team-top {
+  padding-top: 28px;
+  padding-bottom: 32px;
+  @media (max-width: $mobile) {
+    padding: 24px 0 37px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 15px;
+
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -20px;
+    @media (max-width: $tablet) {
+      margin: 0 -15px;
+    }
+    @media (max-width: $mobile) {
+      flex-wrap: wrap;
+      margin: 0;
+      gap: 25px;
+    }
+  }
+
+  &__column {
+    padding: 0 20px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    @media (max-width: $tablet) {
+      padding: 0 15px;
+    }
+    @media (max-width: $mobile) {
+      &:nth-child(2) {
+        display: none;
+      }
+      padding: 0;
+    }
+
+    .card-dash__row.pc-none {
+      @media (min-width: $mobile) {
+        display: none;
+      }
+    }
+
+    .card-dash__row {
+      padding-left: 30px;
+      @media (max-width: $pc) {
+        padding-left: 0;
+      }
+
+    }
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+
+    &:not(:last-child) {
+      max-width: percent(374, 1077);
+      border-right: 1px solid #F1F1F1;
+      @media (max-width: $mobile) {
+        border: none;
+        max-width: 100%;
+      }
+    }
+
+    &:last-child {
+      max-width: percent(326, 1077);
+      @media (max-width: $mobile) {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.team-limit {
+  padding-right: 30px;
+  @media (max-width: $pc) {
+    padding-right: 0;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: math.div(22, 18);
+    font-family: var(--fontMontserrat);
+
+    span {
+      font-size: 14px;
+      line-height: math.div(17, 14);
+      color: var(--secondary-text-light);
+    }
+  }
+
+  &__button {
+    width: 13px;
+    height: 13px;
+
+    @media (hover: hover) {
+      &:hover {
+        svg {
+          fill: var(--blue)
+        }
+      }
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      fill: var(--icon-light)
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 9px;
+    font-size: 12px;
+    line-height: 14px;
+
+    p {
+      &:last-child {
+        color: var(--secondary-text-light);
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__line {
+    height: 5px;
+    background: #B0B6C7;
+    border-radius: 100px;
+    position: relative;
+    overflow: hidden;
+
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: var(--blue);
+    }
+  }
+}
+
+.team-balance {
+  padding-left: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  font-family: var(--fontMontserrat);
+  font-weight: 500;
+  @media (max-width: 1300px) {
+    padding-left: 0;
+  }
+
+  &__item {
+  }
+
+  &__label {
+    line-height: math.div(20, 16);
+    color: var(--secondary-text-light);
+    @media (max-width: $pc) {
+      font-size: 14px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 11px;
+      @media (max-width: $tablet) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__sum {
+    font-size: 22px;
+    line-height: math.div(27, 22);
+    @media (max-width: $pc) {
+      font-size: 18px;
+    }
+    @media (max-width: $tablet) {
+      font-size: 16px;
+    }
+  }
+}
+

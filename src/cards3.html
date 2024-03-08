@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" class="page-admin">
+@@include('html/_head.htm',{
+"title":"Cards3"
+})
+<body>
+<div class="admin">
+    @@include('html/_header-admin.htm',{})
+    <div class="admin__row">
+        @@include('html/_aside-cards1.htm',{})
+        <div class="admin__main">
+            <div class="admin__body admin__body_secondary">
+                @@include('html/_header-pc-admin.htm',{"title":"Cards"})
+                <div class="admin__cards cards">
+                    <div class="cards-create">
+                        <form action="#" class="cards-create__form">
+                            <div class="cards-create__head">
+
+                                <div class="cards-create__title-wrap">
+                                    <h2 class="cards-create__title">
+                                        Card Creation
+                                    </h2>
+                                    <div class="tippy">
+                                        <button class="tippy__button">
+                                            <svg width="17" height="19" viewBox="0 0 19 19" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6.95562 6.523C7.36068 5.29365 8.9638 5.03046 9.73233 6.06714C10.1825 6.6744 10.1511 7.51757 9.65703 8.08883L8.93021 8.92917C8.27057 9.69186 7.90698 10.6708 7.90698 11.6843V11.9375C7.90698 12.2689 8.17248 12.5375 8.5 12.5375C8.82752 12.5375 9.09302 12.2689 9.09302 11.9375V11.6843C9.09302 10.9615 9.35234 10.2633 9.8228 9.71931L10.5496 8.87897C11.4128 7.88101 11.4676 6.40804 10.6812 5.3472C9.33859 3.5362 6.53804 3.99597 5.83044 6.14356L5.56532 6.94822C5.46175 7.26256 5.62967 7.60232 5.94038 7.7071C6.25109 7.81188 6.58693 7.642 6.6905 7.32766L6.95562 6.523Z"
+                                                      fill="#3A63ED"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M8.5 0.938477C3.80558 0.938477 0 4.78849 0 9.53773C0 14.287 3.80558 18.137 8.5 18.137C13.1944 18.137 17 14.287 17 9.53773C17 4.78849 13.1944 0.938477 8.5 0.938477ZM1.18605 9.53773C1.18605 5.45118 4.46062 2.13837 8.5 2.13837C12.5394 2.13837 15.814 5.45118 15.814 9.53773C15.814 13.6243 12.5394 16.9371 8.5 16.9371C4.46062 16.9371 1.18605 13.6243 1.18605 9.53773Z"
+                                                      fill="#3A63ED"/>
+                                                <path d="M9.2907 14.3373C9.2907 14.7791 8.93669 15.1372 8.5 15.1372C8.06331 15.1372 7.7093 14.7791 7.7093 14.3373C7.7093 13.8955 8.06331 13.5374 8.5 13.5374C8.93669 13.5374 9.2907 13.8955 9.2907 14.3373Z"
+                                                      fill="#3A63ED"/>
+                                            </svg>
+                                        </button>
+                                        <div hidden class="tippy__template">
+                                            <p>Transactions in UAH are not allowed with VISA. Please use MasterCard
+                                                for
+                                                UAH
+                                                payments.</p>
+                                            <h4>Transaction Fees Description:</h4>
+                                            <ul>
+                                                <li> From $25 to $50 - $0.30/transaction</li>
+                                                <li> Over $50 - $0.15/transaction</li>
+                                                <li> Declined - $0.50/transaction</li>
+                                                <li> Card issue - $3.00/month</li>
+                                            </ul>
+                                            <p>By pressing "Create" button you agree with the terms and conditions
+                                                of
+                                                this card
+                                                type.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cards-create__right">
+                                    <a href="" class="cards-create__new mob-none">Create few cards
+                                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 9.20605L5 5.20605L1 1.20605"
+                                                  stroke-linecap="round"/>
+                                        </svg>
+                                    </a>
+                                    <a href="" class="cards-create__back">
+                                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="0.49353" y="0.206055" width="16.7518" height="0.697992"
+                                                  transform="rotate(45 0.49353 0.206055)"/>
+                                            <rect width="16.7518" height="0.697992"
+                                                  transform="matrix(-0.707107 0.707107 0.707107 0.707107 11.8455 0.206055)"
+                                            />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cards-create__items">
+                                <label class="input-item">
+                                    <span class="input-item__label">Bank</span>
+                                    <select data-bank name="form[]" class="form">
+                                        <option value="0">Bank1</option>
+                                        <option value="1">Bank2</option>
+                                        <option value="2">Bank3</option>
+                                    </select>
+                                </label>
+                                <label class="input-item">
+                                    <span class="input-item__label">Card Name</span>
+                                    <input type="text" class="input">
+                                </label>
+                                <label class="input-item">
+                                    <span class="input-item__label">Transaction Limit <b>$</b></span>
+                                    <input type="text" class="input">
+                                </label>
+                                <label class="input-item">
+                                    <span class="input-item__label">Card Limit <b>$</b></span>
+                                    <input type="text" class="input">
+                                </label>
+                            </div>
+                            <div class="cards-create__row">
+                                <p>
+                                    Card issue fee:
+                                </p>
+                                <p>$3.00</p>
+                            </div>
+                            <div class="aside__theme-checkbox checkbox">
+                                <input data-theme id="c_131111" data-error="Ошибка" class="checkbox__input"
+                                       type="checkbox"
+                                       value="1"
+                                       name="form[]">
+                                <label for="c_131111" class="checkbox__label reverse">
+                                    <span class="checkbox__circle"></span>
+                                    <span class="checkbox__text">Auto Refill</span></label>
+                            </div>
+                            <div class="cards-create__items">
+                                <label class="input-item">
+                                    <span class="input-item__label">Limit</span>
+                                    <input value="Unlimited" type="text" class="input">
+                                </label>
+                                <label class="input-item">
+                                    <span class="input-item__label">Autorefill Amount</span>
+                                    <input value="Unlimited" type="text" class="input">
+                                </label>
+                            </div>
+                            <button class="button cards-create__button button_fw">
+                                Create
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+@@include('html/_chart-libs.htm',{})
+@@include('html/_chart1.htm',{})
+</body>
+</html>

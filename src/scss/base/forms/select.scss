@@ -1,0 +1,391 @@
+// <SELECT>
+// Сніппет (HTML): sel
+.select {
+	min-width: 0;
+	position: relative;
+	color: var(--text-primary);
+	// .select__body
+	&__body {
+		position: relative;
+	}
+
+	&_lang {
+		width: 70px;
+
+		&._select-open {
+			.select__title {
+				border: 1px solid rgba(0, 0, 0, 0.1);
+			}
+		}
+
+		.select__title {
+			padding: 8px;
+			border: 1px solid transparent;
+			border-radius: 5px 5px 0 0;
+			background: #ffffff;
+			color: var(--blue);
+			@media (max-width: $mobile) {
+				font-size: 12px;
+			}
+		}
+
+		.select__content {
+			flex: 0 0 auto;
+		}
+
+		.select__value {
+			align-items: center;
+
+			@media (max-width: $mobile) {
+				gap: 5px;
+			}
+
+			&::after {
+				content: "";
+				width: 8px;
+				height: 5px;
+				flex: 0 0 7px;
+				background: url("@img/icons/arrow-lang.svg") center / 100% 100% no-repeat;
+			}
+		}
+
+		.select__option {
+			padding: 6px 8px;
+			color: rgba(17, 24, 37, 0.6);
+			@media (max-width: $mobile) {
+				font-size: 12px;
+			}
+			@media (hover: hover) {
+				&:hover {
+					color: var(--blue);
+					background: none;
+				}
+			}
+		}
+
+		.select__options {
+			background: #ffffff;
+			padding: 4px 0 0 0;
+			border: 1px solid rgba(0, 0, 0, 0.1);
+			border-radius: 0px 0px 5px 5px;
+			border-top: none;
+		}
+	}
+
+	&_user {
+		.select__value {
+			gap: 0px;
+
+			&::after {
+				display: none;
+			}
+		}
+
+		&.select_show-top .select__options {
+			border: 1px solid rgba(0, 0, 0, 0.1);
+			border-radius: 5px;
+		}
+
+		.select__options {
+			min-width: 207px;
+			right: 0;
+			left: auto;
+			border: 1px solid rgba(0, 0, 0, 0.1);
+			border-radius: 5px;
+			padding: 6px 0;
+			@media (max-width: $mobile) {
+				left: 0;
+				right: auto;
+			}
+
+			.select__row {
+				flex-direction: row-reverse;
+				align-items: center;
+				gap: 4px;
+
+				& > * {
+					flex-shrink: 0;
+				}
+			}
+
+			.select__option {
+				font-size: 12px;
+				padding: 6px 11px;
+			}
+
+			.select__asset {
+				font-size: 10px;
+				line-height: 150%;
+				color: var(--secondary-text-light);
+			}
+		}
+
+		.select__title {
+			border: none;
+			padding: 0;
+
+			.select__content {
+				display: none;
+			}
+
+			.select__row {
+				display: none;
+			}
+
+			svg {
+				width: 17px;
+				fill: var(--icon-light);
+				height: 17px;
+			}
+		}
+	}
+
+	&_chart {
+		min-width: 103px;
+		color: #6e7191;
+
+		.dark & {
+			color: #fff;
+		}
+
+		&.select_show-top .select__options {
+			bottom: calc(100% - 2px);
+			padding-bottom: 5px;
+		}
+
+		font-size: 12px;
+		@media (max-width: $tablet) {
+			min-width: 73px;
+			color: var(--text-primary);
+		}
+
+		.select__title {
+			border-radius: 3px;
+			height: 28px;
+			padding: 0 11px;
+			@media (max-width: $tablet) {
+				height: 22px;
+				font-size: 8px;
+				padding: 0 8px;
+			}
+		}
+
+		.select__options {
+			top: calc(100% - 2px);
+			@media (max-width: $tablet) {
+				padding: 0 0 4px 0;
+			}
+		}
+
+		.select__option {
+			font-size: 12px;
+			padding: 5px 11px;
+			@media (max-width: $tablet) {
+				font-size: 8px;
+				padding: 4px 8px;
+			}
+		}
+
+		.select__value {
+			&::after {
+				height: 4px;
+				width: 8px;
+				flex: 0 0 8px;
+				background: url("@img/icons/arrow-select2.svg") center / 100% 100% no-repeat;
+			}
+		}
+	}
+
+	&_pagging {
+		.select__title {
+			height: 32px;
+			padding: 0 10px;
+			font-size: 12px;
+		}
+
+		.select__option {
+			font-size: 12px;
+			padding: 5px 10px;
+		}
+	}
+	&_select {
+		width: 100%;
+		font-size: 14px;
+		line-height: math.div(17, 14);
+		color: var(--secondary-text-light);
+		.select__title {
+			border: 1px solid var(--input-light);
+			border-radius: 5px;
+		}
+	}
+
+	// .select__title
+	&__title {
+		color: inherit;
+		text-align: left;
+		cursor: pointer;
+		width: 100%;
+		background: var(--white);
+		border: 1px solid var(--input-light);
+		height: 52px;
+		padding: 0 14px;
+		overflow: hidden;
+		border-radius: 5px;
+	}
+
+	// .select__value
+	&__value {
+		display: flex;
+		min-width: 0;
+		align-items: center;
+		gap: rem(10);
+
+		> * {
+			flex: 1 1 auto;
+		}
+
+		&:after {
+			content: "";
+			flex: 0 0 11px;
+			transition: all 0.3s ease 0s;
+			display: flex;
+			height: 6px;
+			width: 12px;
+			justify-content: center;
+			align-items: center;
+			background: url("@img/icons/arrow-select.svg") center / 100% 100% no-repeat;
+
+			.dark & {
+				background: url("@img/icons/arrow-select-white.svg") center / 100% 100% no-repeat;
+			}
+
+			._select-open & {
+				transform: rotate(-180deg);
+			}
+		}
+
+		&._select-pseudo-label {
+			&::before {
+				content: attr(data-pseudo-label);
+				opacity: 0.5;
+			}
+		}
+	}
+
+	// .select__content
+	&__content {
+		flex: 1 1 auto;
+	}
+
+	// .select__text
+	&__text {
+		flex: 1 1 auto;
+	}
+
+	&__input {
+		width: 100%;
+		background-color: transparent;
+		height: 100%;
+	}
+
+	// .select__options
+	&__options {
+		color: inherit;
+		position: absolute;
+		top: calc(100% - 5px);
+		border-radius: 0 0 5px 5px;
+		min-width: 100%;
+		left: 0;
+		background-color: var(--white);
+		border-top: 0;
+		border: 1px solid var(--input-light);
+		border-top: 0;
+		padding: 0px 0px 10px 0px;
+	}
+
+	// .select__scroll
+	&__scroll {
+		overflow-y: auto;
+		overflow-x: hidden;
+		// Максимальна висота
+		max-height: rem(200);
+		// Стилі скроллбару
+		.simplebar-scrollbar {
+			&::before {
+				//opacity: 1;
+			}
+		}
+	}
+
+	// .select__option
+	&__option {
+		width: 100%;
+		text-align: left;
+		cursor: pointer;
+		display: block;
+		padding: 8px 14px;
+		color: inherit;
+
+		&._select-selected {
+			background-color: #eee;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--blue);
+			}
+		}
+	}
+
+	// Конструкція додаткових даних
+	&__row {
+		display: inline-flex;
+		align-items: center;
+	}
+
+	&__asset {
+	}
+
+	&__text {
+	}
+
+	&_show-top {
+		.select__options {
+			top: auto;
+			bottom: calc(100% - 5px);
+			border: 1px solid var(--input-light);
+			border-bottom: 0;
+			border-radius: 5px 5px 0 0;
+			padding: 5px 0px 10px 0px;
+		}
+	}
+
+	// Стан селекту
+	&._select-open {
+	}
+
+	&._select-disabled {
+	}
+
+	&._select-active {
+	}
+
+	&._select-focus {
+	}
+
+	&._select-multiple {
+	}
+
+	&._select-checkbox {
+	}
+	&__icon-user{
+		display: inline-block;
+		background: url('@img/svg/user.svg') center center /contain no-repeat;
+		width: 20px;
+		height: 20px;}
+}
+
+// Тег
+._select-tag {
+	cursor: pointer;
+}

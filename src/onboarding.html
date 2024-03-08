@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" class="page-admin">
+@@include('html/_head.htm',{
+"title":"User3"
+})
+<body>
+<div class="admin">
+    @@include('html/_header-admin.htm',{})
+    <div class="admin__row">
+        @@include('html/_aside.htm',{})
+        <div class="admin__main">
+            <div class="admin__body admin__body_secondary">
+                @@include('html/_header-pc-on.htm',{"title":"Onboarding"})
+                <div class="admin-on">
+                    <h2 class="admin-on__title">
+                        Just need to activate the account
+                    </h2>
+                    <div class="admin-on__subtitle">
+                        This can be done in two ways, choose whichever is more convenient for you
+                    </div>
+                    <div class="admin-on__block">
+                        <div class="admin-on__title2">
+                            Onboarding
+                        </div>
+                        <div class="admin-on__subtitle2">
+                            In a few minutes our managers will teach you how to use the basic platform functionality
+                        </div>
+                        <a href="" class="button admin-on__button _fw
+">
+                            Schedule
+                        </a>
+                    </div>
+                    <div class="admin-on__bottom">
+                        <div class="admin-on__label">
+                            You got a problem?
+                        </div>
+                        <a href="" class="admin-on__link">
+                            Support
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+@@include('html/_chart-libs.htm',{})
+@@include('html/_chart1.htm',{})
+</body>
+</html>

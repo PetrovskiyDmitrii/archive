@@ -1,0 +1,134 @@
+.article {
+  padding: 74px 0 63px;
+  @media (max-width: $tablet) {
+    padding: 56px 0 35px;
+  }
+  @media (max-width: $mobile) {
+    padding: 27px 0 80px;
+  }
+
+  &__container {
+  }
+
+  &__head {
+    text-align: center;
+    max-width: 742px;
+    margin: 0 auto;
+
+    h1 {
+      font-weight: 500;
+      font-size: 52px;
+      line-height: 120%;
+      @media (max-width: $tablet) {
+        font-size: 35px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 22px;
+        @media (max-width: $tablet) {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 160%;
+      color: #2C4471;
+      @media (max-width: $tablet) {
+        font-size: 16px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 14px;
+        @media (max-width: $tablet) {
+          margin-bottom: 29px;
+        }
+        @media (max-width: $mobile) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    time {
+      display: block;
+      font-size: 18px;
+      line-height: 160%;
+      color: rgba(44, 68, 113, 0.6);
+      @media (max-width: $tablet) {
+        font-size: 16px;
+      }
+
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 56px;
+      @media (max-width: $tablet) {
+        margin-bottom: 30px;
+      }
+      @media (max-width: $mobile) {
+        margin-bottom: 36px;
+      }
+    }
+  }
+
+  &__image {
+    max-width: 1062px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    padding-top: 56px;
+    max-width: 844px;
+    margin: 0 auto;
+    @media (max-width: $mobile) {
+      max-width: 596px;
+      padding-top: 29px;
+    }
+    @media (max-width: $mobile) {
+      padding-top: 36px;
+    }
+
+    & > * {
+
+    }
+
+    h3, h4 {
+      font-weight: 500;
+      font-size: 38px;
+      line-height: 160%;
+      padding-top: 56px;
+      border-top: 2px solid var(--input-light);
+      margin-top: 56px;
+      @media (max-width: $tablet) {
+        font-size: 24px;
+        padding-top: 32px;
+        margin-top: 32px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 28px;
+        @media (max-width: $tablet) {
+          margin-bottom: 32px;
+        }
+      }
+
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 160%;
+      color: #2C4471;
+      @media (max-width: $tablet) {
+        font-size: 16px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 28px;
+        @media (max-width: $mobile) {
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+}

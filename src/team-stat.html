@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" class="page-admin">
+@@include('html/_head.htm',{
+"title":"Team edit"
+})
+<body>
+<div class="admin">
+    @@include('html/_header-admin.htm',{})
+    <div class="admin__row">
+        @@include('html/_aside-team.htm',{})
+        <div class="admin__main">
+            <div class="admin__body">
+                @@include('html/_header-pc-admin.htm',{"title":"Team"})
+                <div class="admin__team team">
+                    <div class="dashboard__bottom-row">
+                        <div class="dashboard__chart chart">
+                            <div class="chart__head chart-head">
+                                <div class="chart-head__left">
+                                    <div class="chart-head__title">
+                                        In Hold
+                                    </div>
+                                    <div class="chart-head__value green">
+                                        $22,542.<span>09</span>
+                                    </div>
+                                </div>
+                                <div class="chart-head__select">
+                                    <select data-class-modif="chart" name="form[]" class="form">
+                                        <option value="1" selected>Today</option>
+                                        <option value="2">Week</option>
+                                        <option value="3">Month</option>
+                                        <option value="4">Year</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <canvas id="myChart"></canvas>
+                        </div>
+                        <div class="dashboard__chart chart">
+                            <div class="chart__head chart-head">
+                                <div class="chart-head__left">
+                                    <div class="chart-head__title">
+                                        Payments
+                                    </div>
+                                    <div class="chart-head__value blue">
+                                        $22,542.<span>09</span>
+                                    </div>
+                                </div>
+                                <div class="chart-head__select">
+                                    <select data-class-modif="chart" name="form[]" class="form">
+                                        <option value="1" selected>Today</option>
+                                        <option value="2">Week</option>
+                                        <option value="3">Month</option>
+                                        <option value="4">Year</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <canvas id="myChart2"></canvas>
+                        </div>
+                    </div>
+                    <div class="team-top">
+                        <h2 class="team-top__title">
+                            Team
+                        </h2>
+                        <div class="team-top__row">
+                            <div class="team-top__column">
+                                <div class="team-limit">
+                                    <div class="team-limit__head">
+                                        <div class="team-limit__title">
+                                            Sick Affiliate
+                                            <span>(Crypto)</span>
+                                        </div>
+                                        <a href="" class="team-limit__button">
+                                            <svg>
+                                                <use xlink:href="@img/icons/icons.svg#edit"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="team-limit__row">
+                                        <p>Cards Limit</p>
+                                        <p>24 / 550</p>
+                                    </div>
+                                    <div class="team-limit__line">
+                                        <span style="width: 40%"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-top__column">
+                                <div class="team-balance">
+                                    <div class="team-balance__item">
+                                        <div class="team-balance__label">Total balance</div>
+                                        <div class="team-balance__sum">
+                                            $72 125.50
+                                        </div>
+                                    </div>
+                                    <div class="team-balance__item">
+                                        <div class="team-balance__label">Total costs</div>
+                                        <div class="team-balance__sum">
+                                            $12 072.09
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-top__column">
+                                <div class="card-dash__rows">
+                                    <div class="card-dash__row pc-none">
+                                        <div class="card-dash__col1">
+                                            Total Balance
+                                        </div>
+                                        <div class="card-dash__col2">
+                                            $3463
+                                        </div>
+                                    </div>
+                                    <div class="card-dash__row pc-none">
+                                        <div class="card-dash__col1">
+                                            Total costs
+                                        </div>
+                                        <div class="card-dash__col2">
+                                            $3463
+                                        </div>
+                                    </div>
+                                    <div class="card-dash__row">
+                                        <div class="card-dash__col1">
+                                            Members total
+                                        </div>
+                                        <div class="card-dash__col2">
+                                            45
+                                        </div>
+                                    </div>
+                                    <div class="card-dash__row">
+                                        <div class="card-dash__col1">
+                                            Groups
+                                        </div>
+                                        <div class="card-dash__col2">
+                                            4
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards__table table">
+                        <div class="table__top">
+                            <div class="table-filter">
+                                <div class="table-filter__left">
+                                    <form data-search action="#" class="table-search">
+                                        <div class="table-search__item">
+                                            <div class="table-search__icon">
+                                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.17416 0.206156C2.15773 0.20659 1.20296 0.693727 0.605889 1.51644C0.00875211 2.33925 -0.158634 3.39817 0.155657 4.36494C0.470036 5.33183 1.22795 6.08982 2.19469 6.40394C3.16135 6.71798 4.21991 6.55019 5.04227 5.95261L6.62386 7.53471C6.74974 7.66062 6.93329 7.70981 7.10527 7.66375C7.27727 7.61761 7.41156 7.48327 7.4577 7.31121C7.50374 7.13916 7.45458 6.95555 7.3287 6.82965L5.74711 5.24754C6.20906 4.61242 6.41912 3.82854 6.33686 3.04745C6.25452 2.26635 5.88568 1.54356 5.30148 1.0187C4.71738 0.493849 3.95937 0.204327 3.17428 0.206062L3.17416 0.206156ZM3.17416 5.56281C2.59615 5.56281 2.04185 5.33315 1.63313 4.9243C1.22442 4.51546 0.994832 3.96097 0.994832 3.38277C0.994832 2.80458 1.22442 2.25009 1.63313 1.84125C2.04185 1.4324 2.59615 1.20274 3.17416 1.20274C3.75217 1.20274 4.30648 1.4324 4.71519 1.84125C5.12391 2.25009 5.35349 2.80458 5.35349 3.38277C5.3528 3.9607 5.12304 4.51486 4.71442 4.92352C4.30588 5.33228 3.75193 5.56212 3.17416 5.56281Z"
+                                                    />
+                                                </svg>
+                                            </div>
+                                            <input type="text" placeholder="Search..."
+                                                   class="input table-search__input">
+                                            <div data-search-remove class="table-search__remove">
+                                                <svg width="8" height="9" viewBox="0 0 8 9" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="0.320068" y="0.206055" width="10.861" height="0.452543"
+                                                          transform="rotate(45 0.320068 0.206055)"
+                                                    />
+                                                    <rect width="10.861" height="0.452543"
+                                                          transform="matrix(-0.707107 0.707107 0.707107 0.707107 7.67993 0.206055)"
+                                                    />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="table-filter__right">
+                                    <div class="table-filter__buttons w-100">
+                                        <a href="" data-popup="#add-user"
+                                           class="table-filter__small-btn button button_border-blue">
+                                            <svg>
+                                                <use xlink:href="@img/icons/icons.svg#user"></use>
+                                            </svg>
+                                            Add User
+                                        </a>
+                                        <a href="" data-popup="#create-group"
+                                           class="table-filter__small-btn button button_border-blue">
+                                            <svg>
+                                                <use xlink:href="@img/icons/icons.svg#owner"></use>
+                                            </svg>
+                                            Create Group
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team__table">
+                        <div class="table__main">
+                            <table>
+                                <tr>
+                                    <th>
+                                    </th>
+                                    <th>User</th>
+                                    <th>Status</th>
+                                    <th>Role</th>
+                                    <th>Group</th>
+                                    <th>Period</th>
+                                    <th>Amount</th>
+                                    <th>Balance</th>
+                                <tr/>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div data-action class="table__action table-action table-action_left">
+                                            <button data-action-btn class="table-action__button">
+                                                <svg>
+                                                    <use xlink:href="@img/icons/icons.svg#action"></use>
+                                                </svg>
+                                            </button>
+                                            <div data-action-items class="table-action__items">
+                                                <a href="" class="table-action__btn-item">
+                                                    <span>Block</span>
+                                                </a>
+                                                <a data-popup="#edit-user" href="" class="table-action__btn-item">
+                                                    <span>Change Role</span>
+                                                </a>
+                                                <a data-popup="#edit-user" href="" class="table-action__btn-item">
+                                                    <span>Edit User</span>
+                                                </a>
+                                                <a data-popup="#transfer" href="" class="table-action__btn-item">
+                                                    <span>Transfer</span>
+                                                </a>
+                                                <a href="" class="table-action__btn-item">
+                                                    <span>Balance History</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__card-trans">
+                                                <h4>John Baton</h4>
+                                                <p>Example@gmail.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress blue">
+                                                    Active
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                Group Owner
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                Crypto
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                01.01.2022 - 01.02.2022
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table__limit table-limit">
+                                            <div class="table-limit__row">
+                                                <span>Total</span> <span class="grey">$9242 / Unlim</span>
+                                            </div>
+                                            <div class="table-limit__line">
+                                                <span style="width: 60%" class="table-limit__progress"></span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15 546
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div data-action class="table__action table-action table-action_left">
+                                            <button data-action-btn class="table-action__button">
+                                                <svg>
+                                                    <use xlink:href="@img/icons/icons.svg#action"></use>
+                                                </svg>
+                                            </button>
+                                            <div data-action-items class="table-action__items">
+                                                <a href="" class="table-action__btn-item">
+                                                    <span>Block</span>
+                                                </a>
+                                                <a data-popup="#edit-user" href="" class="table-action__btn-item">
+                                                    <span>Change Role</span>
+                                                </a>
+                                                <a data-popup="#edit-user" href="" class="table-action__btn-item">
+                                                    <span>Edit User</span>
+                                                </a>
+                                                <a data-popup="#transfer" href="" class="table-action__btn-item">
+                                                    <span>Transfer</span>
+                                                </a>
+                                                <a href="" class="table-action__btn-item">
+                                                    <span>Balance History</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__card-trans">
+                                                <h4>John Baton</h4>
+                                                <p>Example@gmail.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress blue">
+                                                    Active
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                Group Owner
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                Crypto
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                01.01.2022 - 01.02.2022
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table__limit table-limit">
+                                            <div class="table-limit__row">
+                                                <span>Total</span> <span class="grey">$9242 / Unlim</span>
+                                            </div>
+                                            <div class="table-limit__line">
+                                                <span style="width: 60%" class="table-limit__progress"></span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15 546
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div data-action class="table__action table-action table-action_left">
+                                            <button data-action-btn class="table-action__button">
+                                                <svg>
+                                                    <use xlink:href="@img/icons/icons.svg#action"></use>
+                                                </svg>
+                                            </button>
+                                            <div data-action-items class="table-action__items">
+                                                <a href="" class="table-action__btn-item">
+                                                    <span>Block</span>
+                                                </a>
+                                                <a data-popup="#edit-user" href="" class="table-action__btn-item">
+                                                    <span>Change Role</span>
+                                                </a>
+                                                <a data-popup="#edit-user" href="" class="table-action__btn-item">
+                                                    <span>Edit User</span>
+                                                </a>
+                                                <a data-popup="#transfer" href="" class="table-action__btn-item">
+                                                    <span>Transfer</span>
+                                                </a>
+                                                <a href="" class="table-action__btn-item">
+                                                    <span>Balance History</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__card-trans">
+                                                <h4>John Baton</h4>
+                                                <p>Example@gmail.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                <div class="table__progress blue">
+                                                    Active
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                Group Owner
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                Crypto
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                01.01.2022 - 01.02.2022
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table__limit table-limit">
+                                            <div class="table-limit__row">
+                                                <span>Total</span> <span class="grey">$9242 / Unlim</span>
+                                            </div>
+                                            <div class="table-limit__line">
+                                                <span style="width: 60%" class="table-limit__progress"></span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table__cell">
+                                            <div class="table__cell-text">
+                                                $15 546
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+@@include('html/_chart-libs.htm',{})
+@@include('html/_chart1.htm',{})
+</body>
+</html>

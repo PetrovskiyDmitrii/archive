@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" class="page-admin">
+@@include('html/_head.htm',{
+"title":"User3"
+})
+<body>
+<div class="admin">
+    @@include('html/_header-admin.htm',{})
+    <div class="admin__row">
+        @@include('html/_aside-user.htm',{})
+        <div class="admin__main">
+            <div class="admin__body admin__body_secondary">
+                @@include('html/_header-pc-admin.htm',{"title":"User"})
+                <div class="admin__user user">
+                    <form action="#" class="user-form">
+                        <div class="user-form__title">
+                            Email change
+                        </div>
+                        <div class="user-form__items">
+                            <label class="input-item">
+                                <span class="input-item__label">Email</span>
+                                <input type="text" class="input">
+                            </label>
+                            <label class="input-item">
+                                <span class="input-item__label">Password</span>
+                                <input type="password" class="input">
+                            </label>
+                        </div>
+                        <button class="user-form__button button _fw">
+                            Next
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+@@include('html/_chart-libs.htm',{})
+@@include('html/_chart1.htm',{})
+</body>
+</html>

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en" class="page-admin">
+@@include('html/_head.htm',{
+"title":"Cards"
+})
+<body>
+<div class="admin">
+    @@include('html/_header-admin.htm',{})
+    <div class="admin__row">
+        @@include('html/_aside-cards1.htm',{})
+        <div class="admin__main">
+            <div class="admin__body ">
+                @@include('html/_header-pc-admin.htm',{"title":"Cards"})
+                <div class="admin__cards cards">
+                    <div class="cards__top">
+                        <div class="cards__top-column">
+                            <div data-rate="10" class="header-admin__rate">
+                                <div class="header-admin__row">
+                                    <span>Decline Rate</span>
+                                    <b>10%</b>
+                                </div>
+                                <div class="header-admin__line">
+                                    <span style="width: 40%"></span>
+                                </div>
+                            </div>
+                            <div class="cards-balance">
+                                <div class="cards-balance__column">
+                                    <div class="cards-balance__label">
+                                        Balance
+                                    </div>
+                                    <div class="cards-balance__value">
+                                        $4322.89
+                                    </div>
+                                    <a href="" class="cards-balance__button button button_grey">
+                                        <img src="@img/svg/top-up.svg" alt=""> Top Up
+                                    </a>
+                                </div>
+                                <div class="cards-balance__column">
+                                    <div class="cards-balance__label">
+                                        Card Balance
+                                    </div>
+                                    <div class="cards-balance__value">
+                                        $326.823
+                                    </div>
+                                    <a href="" class="cards-balance__button button button_grey">
+                                        <img src="@img/svg/withdraw.svg" alt=""> Withdraw
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cards__top-column">
+                            <div class="cards-stat">
+                                <div class="cards-stat__title">
+                                    Cards Statistic
+                                </div>
+                                <div class="card-dash__rows">
+                                    <div class="card-dash__row">
+                                        <div class="card-dash__col1">
+                                            Daily Spent
+                                        </div>
+                                        <div class="card-dash__col2">
+                                            $634.43
+                                        </div>
+                                    </div>
+                                    <div class="card-dash__row">
+                                        <div class="card-dash__col1">
+                                            Monthly Spent
+                                        </div>
+                                        <div class="card-dash__col2">
+                                            $14 645.32
+                                        </div>
+                                    </div>
+                                    <div class="card-dash__row">
+                                        <div class="card-dash__col1">
+                                            My active cards
+                                        </div>
+                                        <div class="card-dash__col2">
+                                            45 <span>/ 80</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-dash__row">
+                                        <div class="card-dash__col1">
+                                            Active cards per team
+                                        </div>
+                                        <div class="card-dash__col2">
+                                            142 <span>/ 250</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cards__top-column">
+                            <div class="cards-new">
+                                <div class="cards-new__title">
+                                    New
+                                </div>
+                                <div class="cards-new__buttons">
+                                    <a href="" class="cards-new__button button-gradient">
+                                        Create New Cards
+                                    </a>
+                                    <a href="" class="cards-new__button button button_grey">
+                                        Multiply release
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards__table table">
+                        <div data-table-hide class="table__top">
+                            <div class="table-filter">
+                                <div class="table-filter__left">
+                                    <div class="table-filter__title">
+                                        Cards - 45
+                                    </div>
+                                    <form data-search action="#" class="table-search">
+                                        <div class="table-search__item">
+                                            <div class="table-search__icon">
+                                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.17416 0.206156C2.15773 0.20659 1.20296 0.693727 0.605889 1.51644C0.00875211 2.33925 -0.158634 3.39817 0.155657 4.36494C0.470036 5.33183 1.22795 6.08982 2.19469 6.40394C3.16135 6.71798 4.21991 6.55019 5.04227 5.95261L6.62386 7.53471C6.74974 7.66062 6.93329 7.70981 7.10527 7.66375C7.27727 7.61761 7.41156 7.48327 7.4577 7.31121C7.50374 7.13916 7.45458 6.95555 7.3287 6.82965L5.74711 5.24754C6.20906 4.61242 6.41912 3.82854 6.33686 3.04745C6.25452 2.26635 5.88568 1.54356 5.30148 1.0187C4.71738 0.493849 3.95937 0.204327 3.17428 0.206062L3.17416 0.206156ZM3.17416 5.56281C2.59615 5.56281 2.04185 5.33315 1.63313 4.9243C1.22442 4.51546 0.994832 3.96097 0.994832 3.38277C0.994832 2.80458 1.22442 2.25009 1.63313 1.84125C2.04185 1.4324 2.59615 1.20274 3.17416 1.20274C3.75217 1.20274 4.30648 1.4324 4.71519 1.84125C5.12391 2.25009 5.35349 2.80458 5.35349 3.38277C5.3528 3.9607 5.12304 4.51486 4.71442 4.92352C4.30588 5.33228 3.75193 5.56212 3.17416 5.56281Z"
+                                                    />
+                                                </svg>
+                                            </div>
+                                            <input type="text" placeholder="Search..."
+                                                   class="input table-search__input">
+                                            <div data-search-remove class="table-search__remove">
+                                                <svg width="8" height="9" viewBox="0 0 8 9" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="0.320068" y="0.206055" width="10.861" height="0.452543"
+                                                          transform="rotate(45 0.320068 0.206055)"
+                                                    />
+                                                    <rect width="10.861" height="0.452543"
+                                                          transform="matrix(-0.707107 0.707107 0.707107 0.707107 7.67993 0.206055)"
+                                                    />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="table-filter__right">
+                                    <div class="table-filter__actions">
+                                        <a href="" class="table-filter__link">
+                                            <svg>
+                                                <use xlink:href="@img/icons/icons.svg#reload"></use>
+                                            </svg>
+                                        </a>
+                                        <select data-class-modif="user" data-pseudo-label="user" name="form[]"
+                                                class="form">
+                                            <option value=""></option>
+                                            <option value="1">All Users</option>
+                                            <option data-asset="example@gmail.com" value="2">John Baton -</option>
+                                            <option data-asset="example@gmail.com" value="3">John Baton -</option>
+                                            <option data-asset="example@gmail.com" value="4">John Baton -</option>
+                                        </select>
+                                        <div data-calendar
+                                             class="table-filter__calendar">
+                                            <button data-calendar-toggle class="table-filter__link">
+                                                <svg>
+                                                    <use xlink:href="@img/icons/icons.svg#calendar"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="calendar">
+                                                <div class="calendar__row">
+                                                    <div class="calendar__buttons">
+                                                        <button data-date="today" class="calendar__button">
+                                                            Today
+                                                        </button>
+                                                        <button data-date="yesterday" data-yesterday
+                                                                class="calendar__button">
+                                                            Yesterday
+                                                        </button>
+                                                        <button data-date="7day" class="calendar__button">
+                                                            Last 7 Days
+                                                        </button>
+                                                        <button data-date="30day" class="calendar__button">
+                                                            Last 30 Days
+                                                        </button>
+                                                        <button data-date="last30day" class="calendar__button">
+                                                            Previous Month
+                                                        </button>
+                                                    </div>
+                                                    <input data-flatpickr type="text" placeholder="Select Date.."
+                                                           data-input>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-filter__buttons">
+                                        <a href="" class="table-filter__button">
+                                            Report
+                                        </a>
+                                        <div class="table-filter__filter">
+                                            <div class="filter">
+                                                <div class="filter__title">
+                                                    <div class="filter__value">
+                                                        <svg>
+                                                            <use xlink:href="@img/icons/icons.svg#filter2"></use>
+                                                        </svg>
+                                                        Filter
+                                                    </div>
+                                                    <div class="filter__arrow">
+                                                        <svg>
+                                                            <use xlink:href="@img/icons/icons.svg#arrow"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="filter__body">
+                                                    <div class="filter__item">
+                                                        <div class="checkbox2">
+                                                            <input id="c1_1" data-error="Ошибка"
+                                                                   class="checkbox2__input"
+                                                                   type="checkbox" value="1" name="form[]">
+                                                            <label for="c1_1" class="checkbox2__label"><span
+                                                                    class="checkbox2__text">Paused</span></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="filter__item">
+                                                        <div class="checkbox2">
+                                                            <input id="c1_11" data-error="Ошибка"
+                                                                   class="checkbox2__input"
+                                                                   type="checkbox" value="1" name="form[]">
+                                                            <label for="c1_11" class="checkbox2__label"><span
+                                                                    class="checkbox2__text">Blocked</span></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="filter__item">
+                                                        <div class="checkbox2">
+                                                            <input id="c1_1222" data-error="Ошибка"
+                                                                   class="checkbox2__input"
+                                                                   type="checkbox" value="1" name="form[]">
+                                                            <label for="c1_1222" class="checkbox2__label"><span
+                                                                    class="checkbox2__text">Active</span></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="filter__item">
+                                                        <div class="checkbox2">
+                                                            <input id="c1_12" data-error="Ошибка"
+                                                                   class="checkbox2__input"
+                                                                   type="checkbox" value="1" name="form[]">
+                                                            <label for="c1_12" class="checkbox2__label"><span
+                                                                    class="checkbox2__text">Show All</span></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="table__bottom table-bottom">
+                                <div class="table-bottom__left">
+                                    <div class="table-bottom__count">
+                                        <span data-count-card></span> cards selected
+                                    </div>
+                                    <div class="table-bottom__buttons">
+                                        <a data-popup="#pause" href=""
+                                           class="table-bottom__button button button_grey">Pause</a>
+                                        <a data-popup="#resume" href="" class="table-bottom__button button button_grey">Resume</a>
+                                        <a data-popup="#block" href=""
+                                           class="table-bottom__button button button_grey">Block</a>
+                                        <a data-popup="#owner" href="" class="table-bottom__button button button_grey">Change
+                                            ownership</a>
+                                        <a data-popup="#limit" href="" class="table-bottom__button button button_grey">Change
+                                            limits</a>
+                                        <a data-popup="#refill" href="" class="table-bottom__button button button_grey">Autorefill</a>
+                                        <a href="" data-popup="#archive" class="table-bottom__button button button_red"><img
+                                                src="@img/icons/archive.svg" alt=""> Archive</a>
+                                    </div>
+                                </div>
+                                <button data-table-close-hide class="table-bottom__close">
+                                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.49353" y="0.206055" width="16.7518" height="0.697992"
+                                              transform="rotate(45 0.49353 0.206055)"/>
+                                        <rect width="16.7518" height="0.697992"
+                                              transform="matrix(-0.707107 0.707107 0.707107 0.707107 11.8455 0.206055)"
+                                        />
+                                    </svg>
+
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table__main">
+                        <table>
+                            <tr>
+                                <th>
+                                    <div data-table-checkbox-all class="table__checkbox">
+                                        <div class="checkbox2">
+                                            <input id="c_111" data-error="Ошибка" class="checkbox2__input"
+                                                   type="checkbox" value="1" name="form[]">
+                                            <label for="c_111" class="checkbox2__label">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>Name</th>
+                                <th>Note</th>
+                                <th>Name & Surmane</th>
+                                <th>Number</th>
+                                <th>Date</th>
+                                <th>CVV</th>
+                                <th>Trans. Limit</th>
+                                <th>Card Limit</th>
+                                <th>
+                                    Action
+                                </th>
+                            <tr/>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div data-table-checkbox class="table__checkbox">
+                                        <div class="checkbox2">
+                                            <input id="c_12" data-error="Ошибка" class="checkbox2__input"
+                                                   type="checkbox" value="1" name="form[]">
+                                            <label for="c_12" class="checkbox2__label">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a data-popup="#card" href="" class="table__card">
+                                        <div class="table__image-card">
+                                            <button data-popup="#refill" class="table__card-refill">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="8" cy="8" r="8" fill="#3A63ED"/>
+                                                    <path d="M6.24447 10.1091C6.17191 10.1091 6.11346 10.0935 6.06912 10.0622C6.02881 10.0309 6.00462 9.98792 5.99656 9.93319C5.9885 9.87846 6.00059 9.81787 6.03284 9.75142L7.68354 6.12762C7.71982 6.04552 7.76617 5.98689 7.82261 5.9517C7.87904 5.91261 7.94152 5.89307 8.01005 5.89307C8.07857 5.89307 8.13904 5.91261 8.19144 5.9517C8.24788 5.98689 8.29625 6.04552 8.33656 6.12762L9.98726 9.75142C10.0195 9.81787 10.0316 9.88042 10.0235 9.93906C10.0195 9.99378 9.99733 10.0368 9.95702 10.0681C9.91671 10.0954 9.86028 10.1091 9.78772 10.1091C9.7071 10.1091 9.64261 10.0896 9.59423 10.0505C9.54586 10.0075 9.50354 9.94687 9.46726 9.86869L9.03795 8.89531L9.29795 9.03604H6.71005L6.97005 8.89531L6.54075 9.86869C6.50447 9.95469 6.46416 10.0172 6.41982 10.0563C6.37547 10.0915 6.31702 10.1091 6.24447 10.1091ZM7.99795 6.54981L7.0547 8.71353L6.90958 8.59039H9.09842L8.95935 8.71353L8.01005 6.54981H7.99795Z"
+                                                          fill="white"/>
+                                                    <path d="M12.3753 3.18798C12.3744 3.00115 12.2175 2.85037 12.0249 2.8512C11.8322 2.85203 11.6768 3.00417 11.6776 3.191L11.6817 4.08667C11.6833 4.43331 11.6839 4.6719 11.6661 4.85393C11.4628 4.64143 11.2401 4.44664 11.0007 4.2722C10.1649 3.66324 9.12542 3.30225 8 3.30225C5.23858 3.30225 3 5.47317 3 8.15113C3 10.8291 5.23858 13 8 13C10.7614 13 13 10.8291 13 8.15113C13 7.96429 12.8438 7.81283 12.6512 7.81283C12.4585 7.81283 12.3023 7.96429 12.3023 8.15113C12.3023 10.4554 10.3761 12.3234 8 12.3234C5.62389 12.3234 3.69767 10.4554 3.69767 8.15113C3.69767 5.84684 5.62389 3.97884 8 3.97884C8.96913 3.97884 9.86252 4.28919 10.5816 4.81313C10.812 4.98097 11.0244 5.17073 11.2156 5.37918C11.1928 5.38267 11.1681 5.38586 11.1412 5.38871C10.9498 5.40898 10.697 5.40839 10.3205 5.40676L9.39691 5.40277C9.20425 5.40193 9.04738 5.55272 9.04652 5.73955C9.04566 5.92638 9.20114 6.07852 9.3938 6.07935L10.3375 6.08343C10.6886 6.08496 10.9815 6.08624 11.2169 6.0613C11.4639 6.03515 11.6914 5.9767 11.8892 5.82831C11.9317 5.79639 11.972 5.76192 12.01 5.72511C12.048 5.68831 12.0835 5.64917 12.1164 5.60792C12.2694 5.41619 12.3297 5.19547 12.3567 4.95599C12.3824 4.72767 12.3811 4.4437 12.3795 4.10321L12.3753 3.18798Z"
+                                                          fill="white"/>
+                                                </svg>
+                                            </button>
+
+
+                                            <img src="@img/main-img/card-small.png" alt="">
+                                        </div>
+                                        <div class="table__card-content">
+                                            <h4>Card</h4>
+                                            <p class="active">Active</p>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <div class="table__note">
+                                        <a data-popup="#note" href="" class="table__link-note">
+                                            Enter Note
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div data-copy class="table__cell">
+                                        <div data-copy-value="Phill Moris" class="table__cell-text">
+                                            Phill Moris
+                                        </div>
+                                        <button data-copy-btn class="table__cell-btn-copy">
+                                            <svg>
+                                                <use xlink:href="@img/icons/icons.svg#copy"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div data-copy class="table__cell">
+                                        <div data-copy-value="*4232" class="table__cell-text">
+                                            *4232
+                                        </div>
+                                        <button data-copy-btn class="table__cell-btn-copy">
+                                            <svg>
+                                                <use xlink:href="@img/icons/icons.svg#copy"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div data-copy class="table__cell">
+                                        <div data-copy-value="29/21" class="table__cell-text">
+                                            29/21
+                                        </div>
+                                        <button data-copy-btn class="table__cell-btn-copy">
+                                            <svg>
+                                                <use xlink:href="@img/icons/icons.svg#copy"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div data-copy class="table__cell">
+                                        <div data-copy-value="463" class="table__cell-text">
+                                            463
+                                        </div>
+                                        <button data-copy-btn class="table__cell-btn-copy">
+                                            <svg>
+                                                <use xlink:href="@img/icons/icons.svg#copy"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table__cell">
+                                        <div class="table__cell-text">
+                                            1000$
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table__limit table-limit">
+                                        <div class="table-limit__row">
+                                            <span>Total</span> <span>$345 / $500</span>
+                                        </div>
+                                        <div class="table-limit__line">
+                                            <span style="width: 60%" class="table-limit__progress"></span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div data-action class="table__action table-action">
+                                        <button data-action-btn class="table-action__button">
+                                            <svg>
+                                                <use xlink:href="@img/icons/icons.svg#action"></use>
+                                            </svg>
+                                        </button>
+                                        <div data-action-items class="table-action__items">
+                                            <a data-popup="#edit" href="" class="table-action__btn-item">
+                                                <span>Edit</span>
+                                                <svg>
+                                                    <use xlink:href="@img/icons/icons.svg#edit"></use>
+                                                </svg>
+                                            </a>
+                                            <a data-popup="#pause" href="" class="table-action__btn-item">
+                                                <span>Pause</span>
+                                                <svg>
+                                                    <use xlink:href="@img/icons/icons.svg#pause"></use>
+                                                </svg>
+                                            </a>
+                                            <a data-popup="#resume" href="" class="table-action__btn-item">
+                                                <span>Resume</span>
+                                                <svg>
+                                                    <use xlink:href="@img/icons/icons.svg#resume"></use>
+                                                </svg>
+                                            </a>
+                                            <a data-popup="#block" href="" class="table-action__btn-item">
+                                                <span>Block</span>
+                                                <svg>
+                                                    <use xlink:href="@img/icons/icons.svg#block"></use>
+                                                </svg>
+                                            </a>
+                                            <a data-popup="#limit" href="" class="table-action__btn-item">
+                                                <span>Change Limit</span>
+                                                <svg>
+                                                    <use xlink:href="@img/icons/icons.svg#wallet"></use>
+                                                </svg>
+                                            </a>
+                                            <a data-popup="#owner" href="" class="table-action__btn-item">
+                                                <span>Change Owner</span>
+                                                <svg>
+                                                    <use xlink:href="@img/icons/icons.svg#owner"></use>
+                                                </svg>
+                                            </a>
+                                            <a href="" class="table-action__btn-item">
+                                                <span>History</span>
+                                                <svg>
+                                                    <use xlink:href="@img/icons/icons.svg#history"></use>
+                                                </svg>
+                                            </a>
+                                            <a data-popup="#archive" href="" class="table-action__btn-item">
+                                                <span>Archive</span>
+                                                <svg>
+                                                    <use xlink:href="@img/icons/icons.svg#archive"></use>
+                                                </svg>
+                                            </a>
+                                            <a data-popup="#refill" href="" class="table-action__btn-item">
+                                                <span>Auto Refill</span>
+                                                <svg>
+                                                    <use xlink:href="@img/icons/icons.svg#refill"></use>
+                                                </svg>
+                                            </a>
+                                            <a data-popup="#remove" href="" class="table-action__btn-item delete">
+                                                <span>Delete</span>
+                                                <svg>
+                                                    <use xlink:href="@img/icons/icons.svg#delete"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div data-table-checkbox class="table__checkbox">
+                                        <div class="checkbox2">
+                                            <input id="c_121" data-error="Ошибка" class="checkbox2__input"
+                                                   type="checkbox" value="1" name="form[]">
+                                            <label for="c_121" class="checkbox2__label">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a data-popup="#card" href="" class="table__card">
+                                        <div class="table__image-card">
+                                            <button data-popup="#refill" class="table__card-refill">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="8" cy="7.99988" r="8" fill="#EB365C"/>
+                                                    <path d="M8.46512 9.86047C8.46512 10.1173 8.25688 10.3256 8 10.3256C7.74312 10.3256 7.53488 10.1173 7.53488 9.86047C7.53488 9.60359 7.74312 9.39535 8 9.39535C8.25688 9.39535 8.46512 9.60359 8.46512 9.86047Z" fill="white"/>
+                                                    <path d="M8.34884 5.67442C8.34884 5.48176 8.19266 5.32558 8 5.32558C7.80734 5.32558 7.65116 5.48176 7.65116 5.67442V8.46512C7.65116 8.65777 7.80734 8.81395 8 8.81395C8.19266 8.81395 8.34884 8.65777 8.34884 8.46512V5.67442Z" fill="white"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 3C5.23858 3 3 5.23858 3 8C3 10.7614 5.23858 13 8 13C10.7614 13 13 10.7614 13 8C13 5.23858 10.7614 3 8 3ZM3.69767 8C3.69767 5.62389 5.62389 3.69767 8 3.69767C10.3761 3.69767 12.3023 5.62389 12.3023 8C12.3023 10.3761 10.3761 12.3023 8 12.3023C5.62389 12.3023 3.69767 10.3761 3.69767 8Z" fill="white"/>
+                                                </svg>
+                                            </button>
+                                            <img src="@img/main-img/card-small.png" alt="">
+                                        </div>
+                                        <div class="table__card-content">
+                                            <h4>Card</h4>
+                                            <p class="hold">Hold</p>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <div class="table__note">
+                                        <div class="table__note-text">
+                                            Pellentesque habitant morbi tristique senectus...
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div data-copy class="table__cell">
+                                        <div data-copy-value="Phill Moris" class="table__cell-text">
+                                            Phill Moris
+                                        </div>
+                                        <button data-copy-btn class="table__cell-btn-copy">
+                                            <svg>
+                                                <use xlink:href="@img/icons/icons.svg#copy"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div data-copy class="table__cell">
+                                        <div data-copy-value="*4232" class="table__cell-text">
+                                            *4232
+                                        </div>
+                                        <button data-copy-btn class="table__cell-btn-copy">
+                                            <svg>
+                                                <use xlink:href="@img/icons/icons.svg#copy"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div data-copy class="table__cell">
+                                        <div data-copy-value="29/21" class="table__cell-text">
+                                            29/21
+                                        </div>
+                                        <button data-copy-btn class="table__cell-btn-copy">
+                                            <svg>
+                                                <use xlink:href="@img/icons/icons.svg#copy"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div data-copy class="table__cell">
+                                        <div data-copy-value="463" class="table__cell-text">
+                                            463
+                                        </div>
+                                        <button data-copy-btn class="table__cell-btn-copy">
+                                            <svg>
+                                                <use xlink:href="@img/icons/icons.svg#copy"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table__cell">
+                                        <div class="table__cell-text">
+                                            1000$
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table__limit table-limit">
+                                        <div class="table-limit__row">
+                                            <span>Total</span> <span>$345 / $500</span>
+                                        </div>
+                                        <div class="table-limit__line">
+                                            <span style="width: 60%" class="table-limit__progress"></span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div data-action class="table__action table-action">
+                                        <button data-action-btn class="table-action__button">
+                                            <svg>
+                                                <use xlink:href="@img/icons/icons.svg#action"></use>
+                                            </svg>
+                                        </button>
+                                        <div data-action-items class="table-action__items">
+                                            <a data-popup="#edit" href="" class="table-action__btn-item">
+                                                <span>Edit</span>
+                                                <svg>
+                                                    <use xlink:href="@img/icons/icons.svg#edit"></use>
+                                                </svg>
+                                            </a>
+                                            <a data-popup="#pause" href="" class="table-action__btn-item">
+                                                <span>Pause</span>
+                                                <svg>
+                                                    <use xlink:href="@img/icons/icons.svg#pause"></use>
+                                                </svg>
+                                            </a>
+                                            <a data-popup="#resume" href="" class="table-action__btn-item">
+                                                <span>Resume</span>
+                                                <svg>
+                                                    <use xlink:href="@img/icons/icons.svg#resume"></use>
+                                                </svg>
+                                            </a>
+                                            <a data-popup="#block" href="" class="table-action__btn-item">
+                                                <span>Block</span>
+                                                <svg>
+                                                    <use xlink:href="@img/icons/icons.svg#block"></use>
+                                                </svg>
+                                            </a>
+                                            <a data-popup="#limit" href="" class="table-action__btn-item">
+                                                <span>Change Limit</span>
+                                                <svg>
+                                                    <use xlink:href="@img/icons/icons.svg#wallet"></use>
+                                                </svg>
+                                            </a>
+                                            <a data-popup="#owner" href="" class="table-action__btn-item">
+                                                <span>Change Owner</span>
+                                                <svg>
+                                                    <use xlink:href="@img/icons/icons.svg#owner"></use>
+                                                </svg>
+                                            </a>
+                                            <a href="" class="table-action__btn-item">
+                                                <span>History</span>
+                                                <svg>
+                                                    <use xlink:href="@img/icons/icons.svg#history"></use>
+                                                </svg>
+                                            </a>
+                                            <a data-popup="#archive" href="" class="table-action__btn-item">
+                                                <span>Archive</span>
+                                                <svg>
+                                                    <use xlink:href="@img/icons/icons.svg#archive"></use>
+                                                </svg>
+                                            </a>
+                                            <a data-popup="#remove" href="" class="table-action__btn-item delete">
+                                                <span>Delete</span>
+                                                <svg>
+                                                    <use xlink:href="@img/icons/icons.svg#delete"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table__pagging pagging">
+                        <a href="" class="pagging__arrow prev">
+                            <img src="@img/icons/arrow.svg" alt="">
+                        </a>
+                        <ul class="pagging__list">
+                            <li>
+                                <a href="" class="active">
+                                    1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    2
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    3
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    ...
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    546
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="" class="pagging__arrow next">
+                            <img src="@img/icons/arrow.svg" alt="">
+                        </a>
+                        <div class="pagging__select">
+                            <select name="form[]" data-class-modif="pagging" class="form">
+                                <option value="1" selected>25</option>
+                                <option value="2">50</option>
+                                <option value="3">100</option>
+                                <option value="4">200</option>
+                            </select>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+@@include('html/_chart-libs.htm',{})
+@@include('html/_chart1.htm',{})
+</body>
+
+</html>

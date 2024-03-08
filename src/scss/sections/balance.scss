@@ -1,0 +1,741 @@
+.balance {
+    @media (max-width: $tablet) {
+        padding-top: 25px;
+    }
+    @media (max-width: $mobile) {
+        padding-top: 0;
+    }
+
+    &__top {
+        display: flex;
+        padding: 0 0 150px 0;
+        margin: 0 -37px -76px -37px;
+        overflow: hidden;
+        overflow-x: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media (max-width: 1440px) {
+            margin: 0 0 -76px 0;
+        }
+        @media (max-width: $mobile) {
+            padding: 0 0 165px 0;
+            margin: 0 0 -118px 0;
+        }
+    }
+
+    &__top-column {
+        padding: 0 37px;
+        flex: 1 1 auto;
+        @media (max-width: 1440px) {
+            padding: 0;
+        }
+    }
+}
+
+.balance-cards {
+    display: flex;
+    justify-content: flex-start;
+    gap: 31px;
+    @media (max-width: em(1452)) {
+        gap: 18px;
+    }
+    @media (max-width: $mobileSmall) {
+        gap: 7px;
+    }
+
+    &__column {
+        padding: 10px 12px;
+        border-radius: 25px;
+        background: var(--white);
+        box-shadow: 0 15px 30px 0 var(--bg-box-light);
+        width: 341px;
+        height: 182px;
+        @media (max-width: $mobile) {
+            width: 288px;
+            height: 153px;
+            padding: 8px 10px;
+        }
+    }
+
+    &__bg-baby-blue,
+    &__bg-violet,
+    &__bg-red {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.05);
+        z-index: 5;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: url("@img/svg/card-bg.svg") 0 0 no-repeat;
+            width: 100%;
+            height: 79px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            @media (max-width: $mobile) {
+                height: 66px;
+            }
+        }
+    }
+
+    &__bg-baby-blue {
+        background: var(--bg-baby-blue);
+    }
+
+    &__bg-violet {
+        background: var(--bg-violet);
+    }
+
+    &__bg-red {
+        background: var(--bg-red);
+    }
+
+    &__inner {
+        padding: 18px 19px 10px 16px;
+        @media (max-width: $mobile) {
+            padding: 16px 16px 10px 13px;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        @media (max-width: $mobile) {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+    }
+
+    &__action {
+    }
+
+    &__block {
+        display: flex;
+        gap: 7px;
+    }
+
+    &__icon {
+        .dark-icon {
+            .dark & {
+                display: none;
+            }
+        }
+
+        .white-icon {
+            display: none;
+
+            .dark & {
+                display: block;
+            }
+        }
+
+        svg, img {
+            width: 35px;
+            height: 35px;
+            transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+            fill: var(--card-icon-light);
+            @media (max-width: $mobile) {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    &__col {
+        color: var(--card-text-light);
+    }
+
+    &__name {
+        font-size: 16px;
+        line-height: math.div(19, 16);
+
+        &:not(:last-child) {
+            margin-bottom: 1px;
+        }
+
+        @media (max-width: $mobile) {
+            font-size: 14px;
+            line-height: math.div(19, 14);
+        }
+    }
+
+    &__code {
+        font-size: 12px;
+        line-height: math.div(14, 12);
+        @media (max-width: $mobile) {
+            font-size: 10px;
+            line-height: math.div(14, 10);
+        }
+    }
+
+    &__percent {
+        display: flex;
+    }
+
+    &__box {
+        color: var(--card-text-light);
+    }
+
+    &__text {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 12px;
+        line-height: math.div(14, 12);
+        margin-bottom: 5px;
+        gap: 8px;
+        @media (max-width: $mobile) {
+            font-size: 10px;
+            line-height: math.div(14, 10);
+        }
+
+        svg {
+            width: 18px;
+            height: 15px;
+            transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+            fill: var(--card-icon-light);
+            @media (max-width: $mobile) {
+                width: 15px;
+                height: 13px;
+            }
+        }
+
+        span {
+            color: var(--card-text-light);
+        }
+    }
+
+    &__panel {
+        font-size: 12px;
+        line-height: math.div(14, 12);
+        @media (max-width: $mobile) {
+            font-size: 10px;
+            line-height: math.div(14, 10);
+        }
+    }
+
+    &__body {
+        margin: 0 0 13px 3px;
+        height: 60px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        @media (max-width: $mobile) {
+            margin: 0 0 8px 3px;
+            height: 53px;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin: 0 0 5px 0;
+            @media (max-width: $mobile) {
+                margin: 0 0 2px 0;
+            }
+        }
+    }
+
+    &__desc {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--card-desc-light);
+    }
+
+    &__price-min {
+        margin: 0 0 0 5px;
+        font-size: 12px;
+        font-weight: 400;
+
+        span {
+            font-size: 8px;
+        }
+    }
+
+    &__price {
+        font-size: 20px;
+        line-height: math.div(26, 20);
+
+        span {
+            font-size: 16px;
+            line-height: math.div(19, 16);
+            @media (max-width: $mobile) {
+                font-size: 16px;
+                line-height: math.div(20, 16);
+            }
+        }
+
+        @media (max-width: $mobile) {
+            font-size: 16px;
+            line-height: math.div(20, 16);
+        }
+    }
+
+    // &__usd {
+    // 	font-size: 22px;
+    // 	line-height: math.div(22, 22);
+    // 	@media (max-width: $mobile) {
+    // 		font-size: 16px;
+    // 		line-height: math.div(22, 16);
+    // 	}
+    // }
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    &__link {
+        flex-basis: 33%;
+        flex-grow: 1;
+        min-width: 83px;
+        height: 60px;
+        background: var(--white);
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 14px;
+        line-height: math.div(21, 14);
+        gap: 3px;
+        @media (max-width: $mobile) {
+            width: 69px;
+            height: 50px;
+            font-size: 10px;
+            line-height: math.div(21, 10);
+        }
+
+        svg {
+            transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+            fill: var(--icon-light);
+        }
+
+        span {
+            color: var(--secondary-text-light);
+        }
+    }
+
+    &__top-up {
+        width: 20px;
+        height: 19px;
+        @media (max-width: $mobile) {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &__withdraw {
+        width: 19px;
+        height: 19px;
+        @media (max-width: $mobile) {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &__transfer {
+        width: 17px;
+        height: 19px;
+        @media (max-width: $mobile) {
+            width: 14px;
+            height: 16px;
+        }
+    }
+}
+
+.balance-cards-action {
+    position: relative;
+
+    &.active .balance-cards-action__items {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+    }
+
+    &.active .balance-cards-action__button:after {
+        opacity: 1;
+    }
+
+    &.top {
+        .balance-cards-action__items {
+            top: auto;
+            bottom: calc(100% + 5px);
+        }
+    }
+
+    &__button {
+        width: 7px;
+        height: 12px;
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        margin-right: 20px;
+
+        &::after {
+            content: "";
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(58, 99, 237, 0.25);
+            position: absolute;
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                svg {
+                    fill: #3a63ed;
+                }
+            }
+        }
+
+        svg {
+            position: relative;
+            z-index: 2;
+            width: 7px;
+            height: 12px;
+            fill: var(--text-primary);
+            transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+        }
+
+        @media (max-width: em(1400)) {
+            margin-right: rem(16);
+        }
+        @media (max-width: $mobile) {
+            width: 6px;
+            height: 10px;
+            &::after {
+                width: 20px;
+                height: 20px;
+                transform: translate(-48%, -46%);
+            }
+        }
+    }
+
+    &__items {
+        position: absolute;
+        left: 0;
+        top: calc(100% + 5px);
+        background: var(--white);
+        border: 1px solid rgba(61, 66, 79, 0.1);
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+        width: 132px;
+        color: var(--text-primary);
+        opacity: 0;
+        z-index: 4;
+        visibility: hidden;
+        pointer-events: none;
+        transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    }
+
+    &__btn-item {
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+        font-size: 10px;
+        line-height: 12px;
+
+        &.delete {
+            color: #eb365c;
+
+            svg {
+                fill: #eb365c;
+            }
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                color: #3a63ed;
+
+                svg {
+                    fill: #3a63ed;
+                }
+            }
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid var(--divider-color);
+        }
+
+        svg {
+            width: 10px;
+            height: 10px;
+            flex-shrink: 0;
+            fill: var(--icon-light);
+            transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+        }
+    }
+}
+
+.cards-stat {
+    .card-dash__row {
+        gap: 5px;
+    }
+
+    .card-dash__rows {
+        gap: 0px;
+        @media (max-width: $tablet) {
+            gap: 10px;
+        }
+        @media (max-width: $mobile) {
+            gap: 8px;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: math.div(17, 18);
+        @media (max-width: $mobile) {
+            font-size: 16px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 5px;
+            @media (max-width: $mobile) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .card-dash__col1 {
+        width: 50%;
+        @media (max-width: $tablet) {
+            font-size: 14px;
+        }
+    }
+
+    .card-dash__col2 {
+        @media (max-width: 1200px) {
+            font-size: 18px;
+        }
+    }
+}
+
+.cards-new {
+    &__title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 17px;
+
+        &:not(:last-child) {
+            margin-bottom: 21px;
+        }
+    }
+
+    &__buttons {
+        display: grid;
+        gap: 14px;
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 44px;
+        }
+        @media (max-width: $mobile) {
+            gap: 20px;
+        }
+    }
+
+    .button,
+    .button-gradient {
+        min-height: 37px;
+        height: auto;
+    }
+
+    &__button {
+        @media (max-width: 1100px) {
+            font-size: 14px;
+        }
+        @media (max-width: $mobile) {
+            padding: 5px 10px;
+        }
+    }
+}
+
+.cards-team {
+    @media (max-width: $tablet) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    @media (max-width: $mobile) {
+        flex-direction: column;
+    }
+
+    &__top {
+    }
+
+    &__name {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: math.div(29, 24);
+        font-family: var(--fontMontserrat);
+
+        span {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 13px;
+            @media (max-width: $mobile) {
+                margin-bottom: 9px;
+            }
+        }
+    }
+
+    ul {
+        display: grid;
+        gap: 8px;
+        font-family: var(--fontMontserrat);
+        font-size: 14px;
+        line-height: math.div(17, 14);
+        color: var(--secondary-text-light);
+        @media (max-width: $mobile) {
+            font-size: 14px;
+            gap: 2px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 12px;
+        margin-top: 14px;
+        @media (max-width: $tablet) {
+            padding-top: 11px;
+        }
+        @media (max-width: $mobile) {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .button {
+            height: 37px;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        @media (max-width: 1200px) {
+            font-size: 14px;
+            padding: 0 5px;
+        }
+        @media (max-width: $tablet) {
+            font-size: 16px;
+            min-width: 168px;
+        }
+        @media (max-width: $mobile) {
+            width: 100%;
+            min-width: auto;
+        }
+
+        img {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+.filter-balance {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    // @media (max-width: $tablet) {
+    // 	flex-direction: column;
+    // 	align-items: flex-start;
+    // 	gap: 2px;
+    // }
+
+    &__left {
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: math.div(22, 18);
+        font-family: var(--fontMontserrat);
+        @media (max-width: $mobile) {
+            font-size: 16px;
+            line-height: math.div(22, 16);
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        @media (max-width: 600px) {
+            gap: 14px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        gap: 22px;
+        font-weight: 500;
+        font-family: var(--fontMontserrat);
+        font-size: 14px;
+        line-height: math.div(17, 14);
+        color: var(--secondary-text-light);
+        @media (max-width: $tablet) {
+            font-size: 12px;
+        }
+
+        b {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .filter-balance__button {
+            width: 102px;
+        }
+
+        @media (max-width: 600px) {
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+
+    @media (max-width: $mobileSmall) {
+        .select_pagging .select__title {
+            height: 25px;
+        }
+    }
+
+    &__select {
+    }
+}

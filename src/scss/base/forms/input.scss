@@ -1,0 +1,150 @@
+//<INPUT>
+// Сніппет (HTML): inp
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.input {
+  width: 100%;
+  display: block;
+  padding: 0px 13px;
+  border: 1px solid var(--input-light);
+  border-radius: 5px;
+  background: var(--white);
+  height: 52px;
+  transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+  color: #111828;
+  outline: none;
+
+  &:disabled {
+    background: rgba(61, 66, 79, 0.15);
+    pointer-events: none;
+
+    .dark & {
+      background: var(--white);
+    }
+  }
+
+  .dark & {
+    color: #fff;
+  }
+
+  &::placeholder {
+    color: #B0B6C7;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 1px var(--input-light);
+  }
+
+  &._form-focus {
+
+  }
+
+  &._form-error {
+    border: 1px solid #ED3A3A;
+  }
+}
+
+.input[placeholder]:not([data-placeholder-nohiden]) {
+  &::placeholder {
+    transition: opacity 0.3s;
+  }
+
+  &:focus::placeholder {
+    opacity: 0;
+  }
+}
+
+textarea.input {
+  resize: none;
+  padding: 13px;
+}
+
+.input-item {
+
+  &__label {
+    display: block;
+    line-height: math.div(19, 16);
+    color: rgba(17, 24, 37, 0.8);
+    @media (max-width: $mobile) {
+      font-size: 14px;
+    }
+
+    .dark & {
+      color: #fff;
+    }
+
+    .disabled & {
+      .dark & {
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+      @media (max-width: $mobile) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__descr {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: math.div(17, 14);
+    color: rgba(17, 24, 37, 0.6);
+
+    ._form-error & {
+      color: #ED3A3A;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 12px;
+    }
+  }
+
+  &__remove {
+    width: 13px;
+    height: 13px;
+    right: 14px;
+    bottom: 19px;
+    position: absolute;
+    @media (hover: hover) {
+      &:hover {
+        svg {
+          fill: var(--blue)
+        }
+      }
+    }
+
+    svg {
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      fill: var(--text-primary)
+    }
+  }
+
+  &__bottom-text {
+    line-height: math.div(19, 16);
+    margin-top: 13px;
+    @media (max-width: $tablet) {
+      color: rgba(17, 24, 37, 0.7);
+      .dark & {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+    @media (max-width: $mobile) {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    ._form-error & {
+      color: #ED3A3A;
+    }
+  }
+}
